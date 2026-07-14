@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WellMate — heard, without being seen</title>
+<meta name="description" content="WellMate is a private, gentle companion — a place to be heard in your own language, whenever you need it. In Pashto, Dari and English. Your story stays yours." />
+<meta name="theme-color" content="#6E4A55" />
+<meta property="og:title" content="WellMate — heard, without being seen" />
+<meta property="og:description" content="A private, gentle companion. Choose a journey from home and watch it come to life, day by day." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://learnistan.af" />
+<link rel="canonical" href="https://learnistan.af/" />
+<meta property="og:image" content="https://learnistan.af/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WellMate — heard, without being seen" />
+<meta name="twitter:image" content="https://learnistan.af/og.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"WellMate","operatingSystem":"Android","applicationCategory":"HealthApplication","description":"A private, gentle wellbeing companion in Pashto, Dari and English. Your story stays yours.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"LEARNistan","url":"https://learnistan.af"}}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 90'%3E%3Cpath d='M40 20C40 14 44 9 49 7 47 12 47 16 45 19Z' fill='%237D6A4F'/%3E%3Cpath d='M40 19C20 19 14 36 14 52 14 72 27 84 40 84 53 84 66 72 66 52 66 36 60 19 40 19Z' fill='%23C17A82'/%3E%3Cpath d='M40 64C36 58 28 56 28 49 28 45 31 43 34 43 37 43 39 45 40 47 41 45 43 43 46 43 49 43 52 45 52 49 52 56 44 58 40 64Z' fill='%23F5EFE3'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --cotton:#F5EFE3; --rosewater:#EBD7D6; --paper:#FFFDF9; --walnut:#2A211E; --muted:#8a8079; --line:#e7ddcf;
+    --rose:#C17A82; --rose-deep:#A86B73; --saffron:#C8893A; --terra:#A85A44; --plum:#6E4A55;
+    --tint:#C17A82; --radius:20px;
+    --font-head:'Fraunces','Vazirmatn',Georgia,serif;
+    --font-body:'Inter','Vazirmatn',system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;
+    --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C7A86E' stroke-width='1' opacity='0.22'%3E%3Crect x='22' y='22' width='28' height='28'/%3E%3Crect x='22' y='22' width='28' height='28' transform='rotate(45 36 36)'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; color:var(--walnut); background:var(--cotton);
+    font-family:var(--font-body); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  h1,h2,h3{font-family:var(--font-head); line-height:1.12; font-weight:600; margin:0; letter-spacing:-.01em;}
+  p{margin:0;} a{color:inherit; text-decoration:none;} img{max-width:100%; display:block;}
+  button{font-family:inherit;}
+
+  .btn{cursor:pointer; border:0; font-weight:600; font-size:15px; padding:14px 24px; border-radius:999px;
+    display:inline-flex; align-items:center; gap:9px; transition:transform .15s ease, box-shadow .2s ease, background .2s ease;}
+  .btn:active{transform:scale(.97);}
+  .btn-pri{background:var(--rose); color:#fff; box-shadow:0 10px 24px rgba(193,122,130,.32);}
+  .btn-pri:hover{background:var(--rose-deep); box-shadow:0 14px 30px rgba(193,122,130,.45);}
+  .btn-ghost{background:rgba(255,255,255,.6); color:var(--walnut); border:1px solid var(--line);}
+  .btn-ghost:hover{background:#fff;}
+  .btn-light{background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.28);}
+  .btn-light:hover{background:rgba(255,255,255,.26);}
+  .btn-sm{padding:10px 18px; font-size:14px;}
+
+  header{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+    gap:14px; padding:13px clamp(16px,5vw,56px); background:rgba(245,239,227,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .brand{display:flex; align-items:center; gap:11px;}
+  .brand .mark{width:38px; height:30px; flex:none;}
+  .brand b{font-family:var(--font-head); font-weight:600; font-size:22px; color:var(--walnut);}
+  .nav-right{display:flex; align-items:center; gap:6px;}
+  .nav-link{display:none; color:var(--walnut); font-size:14px; padding:8px 12px; border-radius:10px; opacity:.82;}
+  .nav-link:hover{background:rgba(0,0,0,.05); opacity:1;}
+  @media(min-width:900px){.nav-link{display:inline-block;}}
+  .lang{display:flex; gap:2px; background:rgba(42,33,30,.07); border-radius:999px; padding:3px;}
+  .lang button{border:0; background:transparent; color:var(--walnut); font-size:13px; padding:5px 11px; border-radius:999px; cursor:pointer; opacity:.7;}
+  .lang button.active{background:var(--walnut); color:var(--cotton); opacity:1;}
+
+  section{position:relative;}
+  main section[id]{scroll-margin-top:76px;}
+  .wrap{max-width:1140px; margin:0 auto; padding:clamp(52px,7vw,96px) clamp(16px,5vw,56px);}
+  .kicker{display:inline-block; color:var(--rose); font-weight:600; font-size:12.5px; letter-spacing:.22em; text-transform:uppercase; margin-bottom:14px;}
+  .h2{font-size:clamp(30px,5vw,48px); max-width:22ch; margin-bottom:14px;}
+  .lead{font-size:clamp(16px,2vw,19px); color:#6b5f5d; max-width:58ch;}
+  .center{text-align:center;} .center .h2,.center .lead{margin-inline:auto;}
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  /* HERO */
+  .hero{background:
+      radial-gradient(120% 85% at 82% 4%, color-mix(in srgb, var(--tint) 26%, transparent), transparent 58%),
+      var(--pattern), linear-gradient(180deg, var(--rosewater), var(--cotton));
+    background-size:auto, 72px 72px, auto; transition:background 1s ease; overflow:hidden;}
+  .hero .wrap{display:grid; gap:clamp(30px,5vw,60px); grid-template-columns:1fr; align-items:center; padding-top:clamp(34px,5vw,60px);}
+  @media(min-width:940px){.hero .wrap{grid-template-columns:1.08fr .92fr;}}
+  .eyebrow{display:inline-block; color:var(--terra); font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:16px;}
+  .hero h1{font-size:clamp(40px,7vw,72px); font-weight:600; color:var(--walnut); margin-bottom:14px; line-height:1.02;}
+  .hero h1 .em{font-style:italic; color:var(--rose);}
+  .hero .sub{font-size:clamp(17px,2.3vw,20px); color:#5f5551; max-width:36ch; margin-bottom:24px;}
+  .mood-q{font-family:var(--font-head); font-weight:600; color:var(--walnut); margin-bottom:3px; font-size:19px;}
+  .mood-hint{color:var(--muted); font-size:14px; margin-bottom:15px;}
+  .moods{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px;}
+  .mood{cursor:pointer; border:2px solid var(--line); background:var(--paper); border-radius:20px; padding:12px 8px; width:86px;
+    text-align:center; transition:transform .15s ease, border-color .2s ease, box-shadow .2s ease;}
+  .mood:hover{transform:translateY(-3px); box-shadow:0 12px 24px rgba(42,33,30,.09);}
+  .mood.active{border-color:var(--rose); box-shadow:0 0 0 4px rgba(193,122,130,.16);}
+  .mood .emo{font-size:29px; line-height:1; display:block; margin-bottom:6px;}
+  .mood .ml{font-size:13px; font-weight:600; color:var(--walnut);}
+  .mood-resp{min-height:64px; background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:15px 18px;
+    margin-bottom:20px; opacity:0; transform:translateY(8px); transition:.5s ease; max-width:44ch; display:none;}
+  .mood-resp.show{opacity:1; transform:none; display:block;}
+  .mood-resp b{font-family:var(--font-head); display:flex; align-items:center; gap:8px; color:var(--walnut); margin-bottom:2px; font-weight:600;}
+  .mood-resp .pill{font-family:var(--font-body); font-size:12px; font-weight:600; color:var(--terra); background:var(--rosewater); padding:2px 11px; border-radius:999px;}
+  .mood-resp p{color:#6b5f5d; font-size:15px; margin-bottom:10px;}
+  .hero-cta{display:flex; flex-wrap:wrap; gap:12px;}
+
+  .phone-stage{display:flex; justify-content:center; position:relative;}
+  .arch{position:absolute; top:-6px; width:min(330px,86vw); height:106%; background:color-mix(in srgb,var(--rose) 20%,transparent);
+    border-radius:50% 50% 20px 20px / 44% 44% 20px 20px; z-index:0;}
+  .phone{position:relative; z-index:1; width:min(285px,80vw); aspect-ratio:9/19.2; border-radius:42px; padding:11px;
+    background:#2A211E; box-shadow:0 34px 80px rgba(42,33,30,.4), inset 0 0 0 2px rgba(255,255,255,.05); animation:floaty 6s ease-in-out infinite;}
+  @keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+  .phone .notch{position:absolute; top:22px; left:50%; transform:translateX(-50%); width:84px; height:6px; border-radius:99px; background:rgba(255,255,255,.2); z-index:3;}
+  .screen{height:100%; border-radius:32px; overflow:hidden; background:var(--cotton); display:flex; flex-direction:column;}
+  .scr-head{background:var(--paper); padding:30px 18px 13px; border-bottom:1px solid var(--line);}
+  .scr-head .top{display:flex; align-items:center; justify-content:space-between;}
+  .scr-head .top b{font-family:var(--font-head); font-size:18px; color:var(--walnut); font-weight:600;}
+  .scr-head .day{font-size:12px; font-weight:600; color:var(--terra); background:var(--rosewater); padding:3px 10px; border-radius:999px;}
+  .scr-head .greet{font-size:14px; color:var(--muted); margin-top:2px;}
+  .scr-body{padding:13px 15px; overflow:hidden; flex:1;}
+  .scr-body .lbl{font-size:13px; font-weight:600; color:var(--walnut); margin-bottom:8px;}
+  .scr-moods{display:flex; gap:5px; margin-bottom:13px;}
+  .scr-moods span{flex:1; text-align:center; font-size:17px; padding:7px 0; border-radius:12px; background:var(--cotton); border:1px solid var(--line); transition:.3s;}
+  .scr-moods span.on{background:var(--rosewater); border-color:var(--rose); transform:scale(1.05);}
+  .scr-card{background:var(--paper); border:1px solid var(--line); border-radius:15px; padding:10px 12px; display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .scr-card .ic{width:30px; height:30px; border-radius:10px; flex:none; display:flex; align-items:center; justify-content:center; font-size:15px;}
+  .scr-card .tx b{display:block; font-size:13px; color:var(--walnut); font-family:var(--font-head); font-weight:600;}
+  .scr-card .tx small{font-size:11px; color:var(--muted);}
+  .scr-cta{margin:4px 15px 15px; background:var(--plum); color:#fff; border-radius:14px; padding:11px; text-align:center; font-size:13px; font-weight:600; cursor:pointer;}
+
+  /* JOURNEY CENTERPIECE */
+  .grow{background:var(--plum); color:#f5ece9; background-image:var(--pattern); background-size:64px 64px;}
+  .grow .kicker{color:#e8c9cf;}
+  .grow .h2{color:#fff;} .grow .lead{color:rgba(255,255,255,.8);}
+  .j-chips{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:30px 0 34px;}
+  .jchip{cursor:pointer; display:flex; align-items:center; gap:10px; padding:9px 16px 9px 10px; border:2px solid rgba(255,255,255,.22);
+    border-radius:999px; background:rgba(255,255,255,.08); color:#fff; transition:.2s;}
+  .jchip:hover{background:rgba(255,255,255,.16); transform:translateY(-2px);}
+  .jchip.active{border-color:var(--saffron); background:rgba(255,255,255,.14); box-shadow:0 0 0 4px rgba(200,137,58,.2);}
+  .jchip .mini{width:34px; height:34px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; flex:none;}
+  .jchip .mini svg{width:24px; height:24px;}
+  .jchip b{display:block; font-size:13.5px; font-weight:600; line-height:1.25;}
+  .jchip small{display:block; font-size:11px; color:rgba(255,255,255,.65);}
+  .grow-grid{display:grid; gap:clamp(26px,5vw,52px); grid-template-columns:1fr; align-items:center;}
+  @media(min-width:900px){.grow-grid{grid-template-columns:.9fr 1.1fr;}}
+  .grow-info .jname{font-family:var(--font-head); font-size:26px; font-weight:600; margin-top:4px;}
+  .grow-info .jtheme{color:var(--saffron); font-weight:600; margin-bottom:12px;}
+  .readabout{cursor:pointer; border:0; background:none; color:#f0d8bb; font-size:14px; font-weight:600; padding:0; text-decoration:underline; text-underline-offset:4px;}
+  .story{color:rgba(255,255,255,.85); font-size:14.5px; margin-top:10px; max-width:44ch; border-inline-start:3px solid var(--saffron); padding-inline-start:12px;}
+  .grow-info .enc{min-height:48px; color:rgba(255,255,255,.9); font-size:16px; margin:16px 0 12px;}
+  .dots{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 18px;}
+  .dots i{width:13px; height:13px; border-radius:50%; background:rgba(255,255,255,.2); transition:.3s;}
+  .dots i.on{background:var(--saffron); box-shadow:0 0 8px rgba(200,137,58,.7);}
+  .grow-actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center;}
+  .btn-saff{background:var(--saffron); color:#3d2a10; box-shadow:0 10px 24px rgba(200,137,58,.35);}
+  .btn-saff:hover{box-shadow:0 14px 30px rgba(200,137,58,.5);}
+  .tap-hint{font-size:13px; color:rgba(255,255,255,.6); margin-top:12px;}
+
+  .scene{position:relative; border-radius:24px; overflow:hidden; height:min(420px,58vw); min-height:300px; box-shadow:0 30px 70px rgba(0,0,0,.32); cursor:pointer; background:#efe7da;}
+  .scene .daybadge{position:absolute; top:14px; left:14px; z-index:4; background:rgba(42,33,30,.8); color:#fff; font-weight:600; font-size:13px; padding:6px 13px; border-radius:999px; pointer-events:none;}
+  [dir=rtl] .scene .daybadge{left:auto; right:14px;}
+  #sceneArt{position:absolute; inset:0;}
+  #sceneArt svg{width:100%; height:100%; display:block;}
+  .scene .st{opacity:0; transition:opacity 1s ease, transform 1s cubic-bezier(.3,1.2,.5,1);}
+  .scene .st.on{opacity:1;}
+  .scene .st.rise{transform:translateY(90px);}
+  .scene .st.rise.on{transform:translateY(0);}
+  .scene .bob{animation:bob 3.4s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-7px) rotate(4deg);}}
+  .spark{position:absolute; width:8px; height:8px; border-radius:50%; background:var(--saffron); z-index:3; pointer-events:none;}
+  .scene .done{position:absolute; inset:0; display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    background:rgba(42,33,30,.55); color:#fff; padding:24px; z-index:5; backdrop-filter:blur(2px);}
+  .scene .done.show{display:flex;}
+  .scene .done b{font-family:var(--font-head); font-size:23px; margin-bottom:6px;}
+
+  /* DAILY CHECK-IN + MINDFUL GAMES */
+  .daily{background:#faf5ec;}
+  .daily-grid{display:grid; gap:22px; grid-template-columns:1fr; align-items:start; margin-top:38px;}
+  @media(min-width:920px){.daily-grid{grid-template-columns:1fr 1.05fr;}}
+  .panel{background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:24px; box-shadow:0 20px 50px rgba(42,33,30,.07);}
+  .panel h3{font-size:22px; color:var(--walnut); margin-bottom:3px;}
+  .panel .psub{color:var(--muted); font-size:14px; margin-bottom:16px;}
+  .act{display:flex; align-items:center; gap:12px; border-radius:16px; padding:12px 14px; margin-bottom:10px; cursor:pointer; transition:transform .15s ease, box-shadow .2s ease;}
+  .act:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(42,33,30,.08);}
+  .act .bar{width:4px; height:36px; border-radius:99px; flex:none;}
+  .act .aic{width:38px; height:38px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:17px; flex:none; background:rgba(255,255,255,.75);}
+  .act .atx{flex:1;}
+  .act .atx b{display:block; font-family:var(--font-head); font-weight:600; font-size:15.5px; color:var(--walnut); transition:.25s;}
+  .act .atx small{font-size:12px; color:var(--muted);}
+  .act .try{color:var(--terra); font-weight:600; text-decoration:underline; text-underline-offset:3px;}
+  .chk{width:26px; height:26px; border-radius:50%; border:2px solid #c9a0a5; flex:none; display:flex; align-items:center; justify-content:center; color:transparent; font-size:14px; transition:.25s; background:transparent;}
+  .act.done .chk{background:var(--rose); border-color:var(--rose); color:#fff;}
+  .act.done .atx b{opacity:.5; text-decoration:line-through;}
+  .daily-progress{display:flex; align-items:center; gap:12px; margin-top:14px; font-size:13.5px; color:var(--muted);}
+  .dp-bar{flex:1; height:8px; border-radius:99px; background:var(--cotton); overflow:hidden;}
+  .dp-fill{height:100%; width:0; background:linear-gradient(90deg,var(--rose),var(--saffron)); border-radius:99px; transition:.5s ease;}
+  .gtop{display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap;}
+  .gtop .gname{font-family:var(--font-head); font-weight:600; font-size:16px; color:var(--walnut);}
+  .tag{display:inline-block; font-size:11px; font-weight:600; padding:2px 10px; border-radius:99px;}
+  .gscore{font-size:13px; font-weight:600; color:var(--terra); background:var(--rosewater); padding:4px 12px; border-radius:99px;}
+  .greplay{border:0; background:var(--cotton); width:30px; height:30px; border-radius:50%; cursor:pointer; color:var(--terra); font-size:15px;}
+  .greplay:hover{background:var(--rosewater);}
+  .gstage{position:relative; height:270px; border-radius:18px; background:linear-gradient(180deg,#eef3ef,#f6efe4); overflow:hidden; margin-bottom:10px;}
+  .bubble{position:absolute; display:flex; align-items:center; justify-content:center; text-align:center; border-radius:50%; cursor:pointer;
+    font-weight:600; color:#4a5a52; border:1px solid rgba(255,255,255,.85); box-shadow:0 8px 20px rgba(42,33,30,.09);
+    animation:bfloat var(--d,4s) ease-in-out infinite; user-select:none; padding:6px;}
+  @keyframes bfloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+  .bubble.pop{animation:bpop .5s forwards;}
+  @keyframes bpop{40%{transform:scale(1.22); opacity:1;}100%{transform:scale(1.6); opacity:0;}}
+  .bubble.no{animation:bshake .4s;}
+  @keyframes bshake{25%{transform:translateX(-5px);}50%{transform:translateX(5px);}75%{transform:translateX(-3px);}}
+  .gmsg{min-height:22px; font-size:14px; color:#4f7a4a; font-weight:500;}
+  .mini-games{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px;}
+  @media(max-width:520px){.mini-games{grid-template-columns:1fr;}}
+  .mg{background:var(--cotton); border:1px solid var(--line); border-radius:14px; padding:12px 14px;}
+  .mg b{font-family:var(--font-head); font-weight:600; font-size:14.5px; display:block; color:var(--walnut); margin-bottom:4px;}
+  .mg small{display:block; font-size:11.5px; color:var(--muted); margin-top:5px;}
+
+  /* AI */
+  .ai{background:var(--cotton);}
+  .ai .wrap{display:grid; gap:clamp(26px,5vw,52px); grid-template-columns:1fr; align-items:center;}
+  @media(min-width:900px){.ai .wrap{grid-template-columns:1fr 1fr;}}
+  .chatbox{background:var(--paper); border:1px solid var(--line); border-radius:22px; padding:18px; box-shadow:0 20px 50px rgba(42,33,30,.08);}
+  .chat-head{display:flex; align-items:center; gap:10px; padding-bottom:14px; border-bottom:1px solid var(--line); margin-bottom:14px;}
+  .chat-head .av{width:40px; height:40px; border-radius:50%; background:var(--rose); display:flex; align-items:center; justify-content:center; font-size:18px;}
+  .chat-head b{font-family:var(--font-head); font-size:16px;} .chat-head small{display:block; font-size:12px; color:var(--terra);}
+  .bubbles{min-height:140px; display:flex; flex-direction:column; gap:10px; margin-bottom:14px;}
+  .bub{max-width:86%; padding:12px 15px; border-radius:18px; font-size:15px; line-height:1.6;}
+  .bub.me{align-self:flex-end; background:var(--rose); color:#fff; border-bottom-right-radius:5px;}
+  .bub.wm{align-self:flex-start; background:var(--rosewater); color:var(--walnut); border-bottom-left-radius:5px;}
+  [dir=rtl] .bub.me{align-self:flex-start; border-radius:18px; border-bottom-left-radius:5px;}
+  [dir=rtl] .bub.wm{align-self:flex-end; border-radius:18px; border-bottom-right-radius:5px;}
+  .prompts{display:flex; flex-wrap:wrap; gap:8px;}
+  .prompts button{cursor:pointer; border:1px solid var(--line); background:var(--cotton); color:var(--walnut); font-size:13px; padding:8px 15px; border-radius:999px; transition:.2s;}
+  .prompts button:hover{background:var(--rosewater);}
+  .typing::after{content:'▋'; animation:cursor .8s steps(1) infinite;}
+  @keyframes cursor{50%{opacity:0;}}
+
+  /* WHY STRIP */
+  .whystrip{background:var(--rosewater); background-image:var(--pattern); background-size:120px 120px;}
+  .whystrip .wrap{padding-top:40px; padding-bottom:40px;}
+  .strip{display:flex; flex-wrap:wrap; justify-content:center; gap:12px;}
+  .witem{display:flex; align-items:center; gap:10px; background:var(--paper); border:1px solid var(--line); border-radius:999px; padding:11px 20px;}
+  .witem .wi{font-size:19px;}
+  .witem b{font-family:var(--font-head); font-size:15px; color:var(--walnut); font-weight:600;}
+  .witem span{font-size:13px; color:var(--muted);}
+
+  /* GET */
+  .get-card{background-color:var(--rose); background-image:var(--pattern), linear-gradient(150deg,var(--rose),var(--terra));
+    background-size:64px 64px, auto; background-blend-mode:soft-light, normal;
+    border-radius:30px; color:#fff; padding:clamp(38px,6vw,70px); text-align:center;}
+  .get-card .appicon{width:74px; height:80px; margin:0 auto 18px;}
+  .get-card .h2{color:#fff;} .get-card .lead{color:rgba(255,255,255,.92);}
+  .stores{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:26px 0 6px;}
+  .store{display:inline-flex; align-items:center; gap:11px; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3); border-radius:15px; padding:13px 20px; color:#fff; font-size:15px; font-weight:600; transition:.2s;}
+  .store:hover{background:rgba(255,255,255,.26); transform:translateY(-2px);}
+  .store .si{font-size:20px;} .store small{display:flex; align-items:center; gap:6px; opacity:.85; font-size:11px; font-weight:400;}
+  .livedot{width:7px; height:7px; border-radius:50%; background:#7fe0a8; box-shadow:0 0 8px #7fe0a8; animation:pulse 1.6s ease-in-out infinite; display:inline-block;}
+  @keyframes pulse{0%,100%{opacity:.5; transform:scale(.85);}50%{opacity:1; transform:scale(1.15);}}
+  .get-note{margin-top:20px; font-size:14px; color:rgba(255,255,255,.88);}
+  .invite{color:#fff; font-weight:600; text-decoration:underline; text-underline-offset:4px;}
+  .invite:hover{opacity:.85;}
+
+  footer{background:var(--walnut); color:rgba(245,239,227,.72);}
+  footer .wrap{padding-top:52px; padding-bottom:42px;}
+  .safety{background:rgba(200,137,58,.15); border:1px solid rgba(200,137,58,.4); border-radius:18px; padding:18px 22px; color:#f0d8bb; font-size:15px; margin-bottom:28px;}
+  .foot-bottom{display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center; font-size:13.5px; border-top:1px solid rgba(255,255,255,.12); padding-top:24px; margin-top:24px;}
+  .foot-bottom .eco{max-width:64ch; color:rgba(245,239,227,.6);}
+
+  .overlay{position:fixed; inset:0; z-index:100; display:none; align-items:center; justify-content:center; flex-direction:column;
+    background:radial-gradient(circle at 50% 42%,#8a6270,#2a211e); color:#fff; text-align:center; padding:24px;}
+  .overlay.open{display:flex;}
+  .b-ring{width:220px; height:220px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative; margin-bottom:28px;}
+  .b-ring .glow{position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle,rgba(200,137,58,.4),transparent 70%);}
+  .b-circle{width:120px; height:120px; border-radius:50%; background:radial-gradient(circle at 40% 35%,#efd3b0,var(--saffron));
+    transform:scale(.55); transition:transform 4s ease-in-out; box-shadow:0 0 60px rgba(200,137,58,.55);}
+  .b-text{font-family:var(--font-head); font-size:25px; font-weight:600; min-height:34px;} .b-sub{color:rgba(255,255,255,.72); margin-top:6px; font-size:14px;}
+
+  @media(prefers-reduced-motion:reduce){*{animation:none !important;} .b-circle,.scene .st,.hero{transition:none !important;} html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#top" aria-label="WellMate home">
+    <svg class="mark" viewBox="0 0 210 150" role="img" aria-label="WellMate">
+      <path d="M30 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#E3C9C8" stroke-width="30" stroke-linecap="round"/>
+      <path d="M112 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#C17A82" stroke-width="30" stroke-linecap="round"/>
+      <path d="M105 62 V26" fill="none" stroke="#D8AEB1" stroke-width="7" stroke-linecap="round"/>
+      <path d="M104 40 C86 40 74 30 72 14 C90 12 104 22 104 40 Z" fill="#E3C9C8"/>
+      <path d="M106 36 C124 36 136 24 138 10 C120 9 106 20 106 36 Z" fill="#D8AEB1"/>
+    </svg>
+    <b>WellMate</b>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="#journeys" data-i18n="navJourneys">Journeys</a>
+    <a class="nav-link" href="#daily" data-i18n="navDaily">Every day</a>
+    <a class="nav-link" href="#ai" data-i18n="navAi">Talk to WellMate</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="fa">دری</button>
+      <button data-lang="ps">پښتو</button>
+    </div>
+    <a class="btn btn-pri btn-sm" href="#get" data-i18n="navGet">Get WellMate</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" data-i18n="heroEyebrow">In your own language — Pashto · Dari · English</span>
+        <h1><span data-i18n="heroTitle1">Heard,</span> <span class="em" data-i18n="heroTitle2">without being seen.</span></h1>
+        <p class="sub" data-i18n="heroSub">A private, gentle companion — a place to be heard in your own language, whenever you need it. Your story stays yours.</p>
+
+        <p class="mood-q" data-i18n="moodQ">How are you feeling today?</p>
+        <p class="mood-hint" data-i18n="moodHint">However you are, WellMate meets you here — gently.</p>
+        <div class="moods" id="moods" role="group" aria-label="How are you feeling"></div>
+
+        <div class="mood-resp" id="moodResp" aria-live="polite">
+          <b><span id="mr-pill" class="pill"></span><span id="mr-title"></span></b>
+          <p id="mr-text"></p>
+          <button class="btn btn-pri btn-sm" id="mr-act" data-i18n="moodAct">Take a slow breath →</button>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-pri" href="#get" data-i18n="heroCtaGet">Get WellMate</a>
+          <a class="btn btn-ghost" href="#journeys" data-i18n="heroCtaJourneys">Choose your journey</a>
+        </div>
+      </div>
+
+      <div class="phone-stage">
+        <div class="arch" aria-hidden="true"></div>
+        <div class="phone" aria-label="WellMate app preview">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="scr-head">
+              <div class="top"><b>WellMate</b><span class="day" id="scr-day">Day 0 · 14</span></div>
+              <p class="greet" id="scr-greet">Peace be with you 🌿</p>
+            </div>
+            <div class="scr-body">
+              <p class="lbl" id="scr-lbl">How are you feeling today?</p>
+              <div class="scr-moods" id="scr-moods"></div>
+              <div class="scr-card" style="border-color:var(--rose)">
+                <span class="ic" style="background:var(--rosewater)">🧶</span>
+                <span class="tx"><b id="scr-sugg-t">Your journey</b><small id="scr-sugg-d">Tend it a little, day by day</small></span>
+              </div>
+              <div class="scr-card"><span class="ic" style="background:#f3e3cc">✨</span><span class="tx"><b id="scr-p1t">A quiet moment</b><small id="scr-p1d">Breathe, and be here a while</small></span></div>
+            </div>
+            <div class="scr-cta" id="scr-cta">💬 Talk to WellMate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY CENTERPIECE -->
+  <section class="grow" id="journeys">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="kicker" data-i18n="growKicker">Your journey awaits</span>
+        <h2 class="h2 center" data-i18n="growTitle">Choose it. Tend it. Watch it come to life.</h2>
+        <p class="lead center" data-i18n="growLead">Five journeys, drawn from home. Tend yours a little each day — woven, stitched, built, and grown over 14 days.</p>
+      </div>
+
+      <div class="j-chips reveal" id="jChips"></div>
+
+      <div class="grow-grid reveal">
+        <div class="grow-info">
+          <p class="jname" id="growName">Mazar Carpet</p>
+          <p class="jtheme" id="growTheme">Care &amp; Rebuilding</p>
+          <button class="readabout" id="readAbout">Read about Mazar Carpet →</button>
+          <p class="story" id="storyText" hidden></p>
+          <p class="enc" id="growEnc"></p>
+          <div class="dots" id="dots" aria-hidden="true"></div>
+          <div class="grow-actions">
+            <button class="btn btn-saff" id="completeDay" data-i18n="growBtn">Tend it today</button>
+            <button class="btn btn-light btn-sm" id="resetJourney" data-i18n="growReset">Start over</button>
+          </div>
+          <p class="tap-hint" data-i18n="tapHint">…or simply tap the scene to tend it.</p>
+        </div>
+        <div class="scene" id="scene" title="Tap to tend today">
+          <span class="daybadge" id="sceneDay">Day 0 · 14</span>
+          <div id="sceneArt"></div>
+          <div class="done" id="sceneDone"><b id="doneTitle"></b><p id="doneText"></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAILY CHECK-IN + MINDFUL GAMES -->
+  <section class="daily" id="daily">
+    <div class="wrap">
+      <div class="center reveal">
+        <span class="kicker" data-i18n="dKicker">A minute for yourself</span>
+        <h2 class="h2 center" data-i18n="dTitle">Small daily practices, made gentle.</h2>
+      </div>
+      <div class="daily-grid reveal">
+        <div class="panel">
+          <h3 data-i18n="dCheckT">Daily Check-in</h3>
+          <p class="psub" data-i18n="dCheckS">Take a moment to check in with your body and mind.</p>
+          <div id="actList"></div>
+          <div class="daily-progress"><span id="dpCount"></span><div class="dp-bar"><div class="dp-fill" id="dpFill"></div></div></div>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="dGamesT">Mindful Games</h3>
+          <p class="psub" data-i18n="dGamesS">Train your mind daily — small exercises for focus and feeling.</p>
+          <div class="gtop">
+            <span><span class="gname" data-i18n="gName">Positive Bubbles</span> <span class="tag" style="background:#e6f0e2;color:#4f7a4a;" data-i18n="gTag">Positive thinking</span></span>
+            <span style="display:flex;align-items:center;gap:8px;"><span class="gscore" id="gScore"></span><button class="greplay" id="gReplay" title="Play again">↻</button></span>
+          </div>
+          <div class="gstage" id="gstage" aria-label="Positive Bubbles game"></div>
+          <p class="psub" style="margin-bottom:4px;" data-i18n="gHint">Tap the gentle, uplifting words — let the rest drift by.</p>
+          <p class="gmsg" id="gMsg"></p>
+          <div class="mini-games">
+            <div class="mg"><b id="mg1n"></b><span class="tag" style="background:#e0f0ef;color:#2e7d76;" id="mg1t"></span><small id="mg1d"></small></div>
+            <div class="mg"><b id="mg2n"></b><span class="tag" style="background:#fbf0da;color:#a4762a;" id="mg2t"></span><small id="mg2d"></small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section class="ai" id="ai">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker" data-i18n="aiKicker">Whenever you need someone</span>
+        <h2 class="h2" id="aiTitle">Someone to talk to, day or night.</h2>
+        <p class="lead" id="aiSub">A warm, private companion — here to listen, never to judge. Say what's on your heart.</p>
+      </div>
+      <div class="chatbox reveal">
+        <div class="chat-head">
+          <span class="av">🤍</span>
+          <span><b>WellMate</b><small id="aiStatus">Here for you · always private</small></span>
+        </div>
+        <div class="bubbles" id="bubbles"></div>
+        <div class="prompts" id="prompts"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY STRIP -->
+  <section class="whystrip">
+    <div class="wrap">
+      <div class="strip reveal">
+        <div class="witem"><span class="wi">🌸</span><span><b data-i18n="w1t">Understood</b> · <span data-i18n="w1d">speaks your world</span></span></div>
+        <div class="witem"><span class="wi">🔒</span><span><b data-i18n="w2t">Private</b> · <span data-i18n="w2d">your story stays yours</span></span></div>
+        <div class="witem"><span class="wi">🕊️</span><span><b data-i18n="w3t">Never alone</b> · <span data-i18n="w3d">day or night</span></span></div>
+        <div class="witem"><span class="wi">🤲</span><span><b data-i18n="w4t">By women who've been there</b></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET -->
+  <section id="get" style="background:var(--cotton);">
+    <div class="wrap">
+      <div class="get-card reveal">
+        <svg class="appicon" viewBox="0 0 80 90" role="img" aria-label="WellMate app icon">
+          <path d="M40 20C40 14 44 9 49 7 47 12 47 16 45 19Z" fill="#7D6A4F"/>
+          <path d="M40 19C20 19 14 36 14 52 14 72 27 84 40 84 53 84 66 72 66 52 66 36 60 19 40 19Z" fill="#fff"/>
+          <path d="M40 64C36 58 28 56 28 49 28 45 31 43 34 43 37 43 39 45 40 47 41 45 43 43 46 43 49 43 52 45 52 49 52 56 44 58 40 64Z" fill="#C17A82"/>
+        </svg>
+        <h2 class="h2 center" data-i18n="getTitle">Get WellMate.</h2>
+        <p class="lead center" data-i18n="getSub">The Android app is here — now in internal testing on Google Play, by invitation. Public release is coming very soon; iOS will follow.</p>
+        <div class="stores">
+          <a class="store" href="https://play.google.com/apps/internaltest/4701712693105011077" target="_blank" rel="noopener"><span class="si">▶</span><span><small><span class="livedot"></span><span data-i18n="storePlay">Now in internal testing</span></small>Google Play</span></a>
+          <span class="store" style="opacity:.75"><span class="si">📱</span><span><small data-i18n="storeIos">Coming soon</small>App Store</span></span>
+        </div>
+        <p class="get-note" style="margin-bottom:4px;"><a class="invite" id="inviteLink" href="#" data-i18n="inviteCta">Want an invite? Write to us →</a></p>
+        <p class="get-note" style="margin-top:6px;" data-i18n="getNote">Testing is invite-only for now — public release very soon. In your language, always yours.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="safety" data-i18n="safety">If you ever feel unsafe or in crisis, please reach out to someone you trust, or a local helpline. Support is always one step away — you never have to face it alone.</p>
+    <div class="foot-bottom">
+      <p class="eco" data-i18n="eco">WellMate is a standalone companion, created within LEARNistan (part of the LEARN family). Your experience is of WellMate alone.</p>
+      <p><a href="privacy.html" data-i18n="privacyLink" style="text-decoration:underline; text-underline-offset:3px;">Privacy</a> · © <span id="year"></span> learnistan.af</p>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="breathOverlay" role="dialog" aria-modal="true" aria-label="A quiet breath">
+  <div class="b-ring"><div class="glow"></div><div class="b-circle" id="bCircle"></div></div>
+  <div class="b-text" id="bText"></div>
+  <div class="b-sub" id="bSub"></div>
+  <button class="btn btn-light" id="closeBreath" style="margin-top:32px" data-i18n="breathClose">Close</button>
+</div>
+
+<script>
+/* ============================================================
+   WellMate showcase — vanilla JS, no dependencies
+   The journeys build like the real app: woven, risen, sewn, grown.
+   ============================================================ */
+
+const MOOD_EMOJI = {calm:"😌", good:"😊", tired:"😔", anxious:"😣", sad:"😢"};
+const MOOD_TINT  = {calm:"#C17A82", good:"#C8893A", tired:"#6E4A55", anxious:"#A85A44", sad:"#8a6a72"};
+
+const JOURNEY_ORDER = ["carpet","minarets","dress","ghara","pomegranate"];
+
+/* ---------- mini icons for the selector chips ---------- */
+const MINIS = {
+  carpet:`<svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="28" rx="2" fill="#8E2C3B"/><rect x="11" y="9" width="18" height="22" fill="none" stroke="#e9d3b4" stroke-width="1.6"/><path d="M20 13l5 7-5 7-5-7z" fill="#e9d3b4"/></svg>`,
+  minarets:`<svg viewBox="0 0 40 40"><path d="M12 34 L14 10 L18 10 L20 34 Z" fill="#d8b57e"/><path d="M22 34 L24 14 L28 14 L30 34 Z" fill="#cfa96f"/><rect x="13" y="18" width="6" height="2.4" fill="#46a0a6"/><rect x="23" y="21" width="6" height="2.4" fill="#46a0a6"/></svg>`,
+  dress:`<svg viewBox="0 0 40 40"><path d="M16 6h8l1 4-5 2-5-2z" fill="#d99a2b"/><path d="M15 12 L10 32 h20 L25 12 Z" fill="#d99a2b"/><rect x="11" y="27" width="18" height="4" fill="#2f5d52"/><rect x="16" y="8" width="8" height="7" fill="#7d3450"/></svg>`,
+  ghara:`<svg viewBox="0 0 40 40"><path d="M14 8 h12 l2 24 c-3 3-13 3-16 0 z" fill="#a7bcb6"/><rect x="15" y="10" width="10" height="12" fill="#5c756e"/><rect x="17" y="12" width="6" height="8" fill="none" stroke="#e8eeec" stroke-width="1"/></svg>`,
+  pomegranate:`<svg viewBox="0 0 40 40"><rect x="18.5" y="22" width="3" height="12" fill="#7B5638"/><circle cx="20" cy="16" r="10" fill="#5C7A53"/><circle cx="16" cy="15" r="2.4" fill="#b13636"/><circle cx="24" cy="14" r="2.4" fill="#b13636"/><circle cx="20" cy="20" r="2.4" fill="#8E2C3B"/></svg>`
+};
+
+/* ---------- full scenes (progressive builds) ----------
+   Each scene fills the frame. Groups with class="st" and data-at
+   appear when day/14 >= data-at. "rise" groups rise into place.  */
+const SCENES = {
+
+carpet:`<svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice">
+<defs>
+<pattern id="pmz" width="50" height="50" patternUnits="userSpaceOnUse">
+  <rect width="50" height="50" fill="#8E2C3B"/>
+  <rect x="3" y="3" width="44" height="44" fill="none" stroke="#e9d3b4" stroke-width="1.4"/>
+  <rect x="10" y="10" width="30" height="30" fill="none" stroke="#e9d3b4" stroke-width="1"/>
+  <rect x="20" y="20" width="10" height="10" fill="#e9d3b4"/>
+  <circle cx="3" cy="3" r="3.2" fill="#f4e9da"/><circle cx="47" cy="3" r="3.2" fill="#f4e9da"/><circle cx="3" cy="47" r="3.2" fill="#f4e9da"/><circle cx="47" cy="47" r="3.2" fill="#f4e9da"/>
+  <g fill="#f4e9da"><circle cx="15" cy="6.5" r="1.2"/><circle cx="25" cy="6.5" r="1.2"/><circle cx="35" cy="6.5" r="1.2"/><circle cx="6.5" cy="15" r="1.2"/><circle cx="6.5" cy="25" r="1.2"/><circle cx="6.5" cy="35" r="1.2"/><circle cx="43.5" cy="15" r="1.2"/><circle cx="43.5" cy="25" r="1.2"/><circle cx="43.5" cy="35" r="1.2"/><circle cx="15" cy="43.5" r="1.2"/><circle cx="25" cy="43.5" r="1.2"/><circle cx="35" cy="43.5" r="1.2"/></g>
+</pattern>
+<clipPath id="weave"><rect id="weaveRect" x="160" y="66" width="200" height="10"/></clipPath>
+</defs>
+<rect width="520" height="380" fill="#f2e9db"/>
+<rect y="332" width="520" height="48" fill="#e7dbc6"/>
+<rect x="136" y="28" width="16" height="330" rx="5" fill="#b98d55"/><rect x="139" y="28" width="4" height="330" fill="#a67a45"/>
+<rect x="368" y="28" width="16" height="330" rx="5" fill="#b98d55"/><rect x="371" y="28" width="4" height="330" fill="#a67a45"/>
+<rect x="120" y="42" width="280" height="15" rx="5" fill="#cda36a"/><rect x="120" y="46" width="280" height="3" fill="#b98d55"/>
+<rect x="120" y="330" width="280" height="14" rx="5" fill="#cda36a"/>
+<path d="M168 57v276M181 57v276M194 57v276M207 57v276M220 57v276M233 57v276M246 57v276M259 57v276M272 57v276M285 57v276M298 57v276M311 57v276M324 57v276M337 57v276M350 57v276" stroke="#e8e2d4" stroke-width="2"/>
+<path d="M168 57v10M181 57v10M194 57v10M207 57v10M220 57v10M233 57v10M246 57v10M259 57v10M272 57v10M285 57v10M298 57v10M311 57v10M324 57v10M337 57v10M350 57v10" stroke="#f6f1e6" stroke-width="3"/>
+<g clip-path="url(#weave)"><rect x="163" y="66" width="194" height="258" fill="url(#pmz)"/><rect x="163" y="66" width="194" height="258" fill="none" stroke="#6f1f2c" stroke-width="3"/></g>
+<g id="shuttle"><rect x="148" y="0" width="224" height="9" rx="4.5" fill="#a9865a"/><rect x="148" y="2" width="224" height="2.4" fill="#8a6a3f"/><circle cx="372" cy="4.5" r="6" fill="#334b45"/><path d="M372 4.5 q14 10 6 22" stroke="#334b45" stroke-width="1.6" fill="none"/></g>
+<g class="st" data-at="0.97"><path d="M166 324v16M175 324v16M184 324v16M193 324v16M202 324v16M211 324v16M220 324v16M229 324v16M238 324v16M247 324v16M256 324v16M265 324v16M274 324v16M283 324v16M292 324v16M301 324v16M310 324v16M319 324v16M328 324v16M337 324v16M346 324v16M355 324v16" stroke="#f4e9da" stroke-width="2.6"/></g>
+</svg>`,
+
+minarets:`<svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbe6f2"/><stop offset="1" stop-color="#eef8fb"/></linearGradient></defs>
+<rect width="520" height="380" fill="url(#sky)"/>
+<g fill="#fff" opacity=".75"><ellipse cx="120" cy="70" rx="42" ry="14"/><ellipse cx="150" cy="60" rx="30" ry="11"/><ellipse cx="400" cy="105" rx="48" ry="15"/><ellipse cx="430" cy="94" rx="30" ry="10"/></g>
+<rect y="302" width="520" height="78" fill="#ead9b8"/>
+<path d="M0 302 h520" stroke="#dcc79d" stroke-width="2"/>
+<g fill="#c9b58c" opacity=".35"><rect x="20" y="284" width="46" height="18"/><rect x="80" y="290" width="30" height="12"/><rect x="440" y="286" width="50" height="16"/><rect x="380" y="292" width="34" height="10"/></g>
+<g class="st rise" data-at="0.1">
+ <ellipse cx="105" cy="320" rx="34" ry="7" fill="#00000018"/>
+ <path d="M85 318 L96 150 L114 150 L125 318 Z" fill="#d8b57e" stroke="#bd9a58" stroke-width="1.5"/>
+ <rect x="88" y="296" width="34" height="22" rx="3" fill="#cfa96f"/><path d="M95 318 v-12 a4 4 0 0 1 8 0 v12 z M108 318 v-12 a4 4 0 0 1 8 0 v12 z" fill="#6b4f2e"/>
+ <rect x="90" y="144" width="30" height="9" rx="3" fill="#b98d55"/>
+ <path d="M97 144 L100 120 L110 120 L113 144 Z" fill="#cfa96f"/><circle cx="105" cy="115" r="6" fill="#8a5e2f"/>
+ <path d="M102 128 a3 3 0 0 1 6 0 v7 h-6 z" fill="#4a3a28"/>
+ <path d="M102 190 a3 3 0 0 1 6 0 v7 h-6 z M102 240 a3 3 0 0 1 6 0 v7 h-6 z" fill="#4a3a28"/>
+ <rect x="93" y="166" width="24" height="6" fill="#46a0a6"/><rect x="91" y="210" width="28" height="6" fill="#46a0a6"/><rect x="89" y="258" width="31" height="6" fill="#46a0a6"/>
+</g>
+<g class="st rise" data-at="0.35">
+ <ellipse cx="215" cy="322" rx="38" ry="8" fill="#00000018"/>
+ <path d="M193 320 L206 88 L224 88 L237 320 Z" fill="#ddbc85" stroke="#bd9a58" stroke-width="1.5"/>
+ <rect x="196" y="296" width="38" height="24" rx="3" fill="#cfa96f"/><path d="M204 320 v-13 a4.5 4.5 0 0 1 9 0 v13 z M219 320 v-13 a4.5 4.5 0 0 1 9 0 v13 z" fill="#6b4f2e"/>
+ <rect x="200" y="82" width="30" height="9" rx="3" fill="#b98d55"/>
+ <path d="M207 82 L210 56 L220 56 L223 82 Z" fill="#cfa96f"/><circle cx="215" cy="51" r="6" fill="#8a5e2f"/>
+ <path d="M212 66 a3 3 0 0 1 6 0 v7 h-6 z M212 130 a3 3 0 0 1 6 0 v7 h-6 z M212 195 a3 3 0 0 1 6 0 v7 h-6 z" fill="#4a3a28"/>
+ <rect x="203" y="108" width="24" height="6" fill="#46a0a6"/><rect x="201" y="160" width="28" height="6" fill="#46a0a6"/><rect x="199" y="222" width="32" height="6" fill="#46a0a6"/><rect x="197" y="268" width="36" height="6" fill="#46a0a6"/>
+</g>
+<g class="st rise" data-at="0.6">
+ <ellipse cx="325" cy="321" rx="36" ry="7.5" fill="#00000018"/>
+ <path d="M304 319 L316 118 L334 118 L346 319 Z" fill="#d8b57e" stroke="#bd9a58" stroke-width="1.5"/>
+ <rect x="307" y="296" width="36" height="23" rx="3" fill="#cfa96f"/><path d="M315 319 v-12 a4 4 0 0 1 8 0 v12 z M329 319 v-12 a4 4 0 0 1 8 0 v12 z" fill="#6b4f2e"/>
+ <rect x="310" y="112" width="30" height="9" rx="3" fill="#b98d55"/>
+ <path d="M317 112 L320 88 L330 88 L333 112 Z" fill="#cfa96f"/><circle cx="325" cy="83" r="6" fill="#8a5e2f"/>
+ <path d="M322 96 a3 3 0 0 1 6 0 v7 h-6 z M322 160 a3 3 0 0 1 6 0 v7 h-6 z M322 215 a3 3 0 0 1 6 0 v7 h-6 z" fill="#4a3a28"/>
+ <rect x="313" y="136" width="24" height="6" fill="#46a0a6"/><rect x="311" y="186" width="28" height="6" fill="#46a0a6"/><rect x="309" y="240" width="32" height="6" fill="#46a0a6"/>
+</g>
+<g class="st rise" data-at="0.85">
+ <ellipse cx="430" cy="320" rx="33" ry="7" fill="#00000018"/>
+ <path d="M411 318 L421 158 L439 158 L449 318 Z" fill="#ddbc85" stroke="#bd9a58" stroke-width="1.5"/>
+ <rect x="413" y="296" width="34" height="22" rx="3" fill="#cfa96f"/><path d="M420 318 v-11 a4 4 0 0 1 8 0 v11 z M432 318 v-11 a4 4 0 0 1 8 0 v11 z" fill="#6b4f2e"/>
+ <rect x="415" y="152" width="30" height="9" rx="3" fill="#b98d55"/>
+ <path d="M422 152 L425 128 L435 128 L438 152 Z" fill="#cfa96f"/><circle cx="430" cy="123" r="6" fill="#8a5e2f"/>
+ <path d="M427 136 a3 3 0 0 1 6 0 v7 h-6 z M427 196 a3 3 0 0 1 6 0 v7 h-6 z" fill="#4a3a28"/>
+ <rect x="418" y="176" width="24" height="6" fill="#46a0a6"/><rect x="416" y="218" width="28" height="6" fill="#46a0a6"/><rect x="414" y="262" width="32" height="6" fill="#46a0a6"/>
+</g>
+</svg>`,
+
+dress:`<svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice">
+<defs>
+<pattern id="ddots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="1.1" fill="#f7eee9"/></pattern>
+</defs>
+<rect width="520" height="380" fill="#f7eee9"/>
+<ellipse cx="255" cy="352" rx="130" ry="12" fill="#e8d9d0"/>
+<g class="st" data-at="0.08">
+ <path d="M225 62 h60 l4 12 -14 6 h-40 l-14 -6 z" fill="#c98f22"/>
+ <path d="M223 74 h64 v54 h-64 z" fill="#d99a2b"/>
+ <path d="M247 62 a8 8 0 0 0 16 0 z" fill="#f7eee9"/>
+ <rect x="236" y="76" width="38" height="50" fill="#2f5d52"/>
+ <rect x="240" y="80" width="30" height="42" fill="none" stroke="#e9d3b4" stroke-width="1.6"/>
+ <rect x="249" y="76" width="12" height="50" fill="#a2314f"/>
+ <g fill="#e9d3b4"><circle cx="244" cy="86" r="1.3"/><circle cx="244" cy="94" r="1.3"/><circle cx="244" cy="102" r="1.3"/><circle cx="244" cy="110" r="1.3"/><circle cx="266" cy="86" r="1.3"/><circle cx="266" cy="94" r="1.3"/><circle cx="266" cy="102" r="1.3"/><circle cx="266" cy="110" r="1.3"/></g>
+</g>
+<g class="st" data-at="0.28">
+ <path d="M223 126 C210 200 190 280 172 328 L338 328 C320 280 300 200 287 126 Z" fill="#d99a2b"/>
+ <path d="M223 126 C210 200 190 280 172 328 L186 328 C202 278 218 200 229 126 Z" fill="#c98f22"/>
+</g>
+<g class="st" data-at="0.48">
+ <path d="M223 78 L180 96 C170 128 168 165 173 192 L199 186 C201 152 206 116 223 100 Z" fill="#d99a2b"/>
+ <path d="M287 78 L330 96 C340 128 342 165 337 192 L311 186 C309 152 304 116 287 100 Z" fill="#c98f22"/>
+</g>
+<g class="st" data-at="0.62">
+ <path d="M180 296 C230 306 280 306 330 296 L338 328 L172 328 Z" fill="#2f5d52"/>
+ <path d="M181 293 C231 303 279 303 329 293" stroke="#a2314f" stroke-width="4" fill="none"/>
+ <path d="M175 316 C230 326 280 326 335 316" stroke="#e9d3b4" stroke-width="2" fill="none"/>
+ <g fill="#d99a2b"><path d="M205 306 l5 8 -5 8 -5 -8 z"/><path d="M235 309 l5 8 -5 8 -5 -8 z"/><path d="M265 310 l5 8 -5 8 -5 -8 z"/><path d="M295 308 l5 8 -5 8 -5 -8 z"/></g>
+</g>
+<g class="st" data-at="0.78" fill="#f7eee9">
+ <path d="M225 170 l4 7 -4 7 -4 -7 z M255 176 l4 7 -4 7 -4 -7 z M285 170 l4 7 -4 7 -4 -7 z"/>
+ <path d="M212 220 l4 7 -4 7 -4 -7 z M244 226 l4 7 -4 7 -4 -7 z M276 226 l4 7 -4 7 -4 -7 z M302 220 l4 7 -4 7 -4 -7 z"/>
+ <path d="M200 262 v14 M196 269 h8" stroke="#f7eee9" stroke-width="2"/>
+ <path d="M255 268 v14 M251 275 h8" stroke="#f7eee9" stroke-width="2"/>
+ <path d="M310 262 v14 M306 269 h8" stroke="#f7eee9" stroke-width="2"/>
+ <rect x="170" y="180" width="30" height="12" fill="#2f5d52"/><rect x="310" y="180" width="30" height="12" fill="#2f5d52"/>
+ <rect x="170" y="177" width="30" height="3" fill="#a2314f"/><rect x="310" y="177" width="30" height="3" fill="#a2314f"/>
+</g>
+<g class="st" data-at="0.95">
+ <path d="M292 74 C330 96 342 180 330 260 C326 282 310 286 302 270 C318 200 310 120 284 88 Z" fill="#f3d9a0" opacity=".62"/>
+ <path d="M230 328 C226 344 232 356 246 356 C254 356 256 348 255 340 C255 348 258 356 266 356 C280 356 285 344 281 328 Z" fill="#b9812a"/>
+</g>
+<g class="st bob" data-at="0.05">
+ <rect x="428" y="66" width="18" height="30" rx="3" fill="#2f5d52"/><rect x="428" y="72" width="18" height="18" fill="#3d7266"/>
+ <path d="M452 58 q14 6 6 20" stroke="#5a5a5a" stroke-width="2" fill="none"/><path d="M458 52 a5 5 0 1 1 -6 8" stroke="#8a8a8a" stroke-width="2" fill="none"/>
+</g>
+</svg>`,
+
+ghara:`<svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice">
+<defs>
+<pattern id="gdots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.3" fill="#e8eeec"/></pattern>
+</defs>
+<rect width="520" height="380" fill="#eef1f2"/>
+<ellipse cx="258" cy="352" rx="120" ry="12" fill="#dde3e4"/>
+<g class="st" data-at="0.08">
+ <path d="M212 66 h96 l6 200 c-8 14 -32 20 -54 20 c-22 0 -46 -6 -54 -20 z" fill="#a7bcb6"/>
+ <path d="M212 66 h10 l-4 210 c-3 -2 -6 -4 -8 -8 z" fill="#97aca6"/>
+ <path d="M248 66 a12 9 0 0 0 24 0 z" fill="#eef1f2"/>
+ <path d="M214 262 c30 12 62 12 92 0" stroke="#8fa49e" stroke-width="2" fill="none"/>
+</g>
+<g class="st" data-at="0.3">
+ <path d="M212 70 L172 88 C164 130 164 178 170 206 L196 200 C198 160 202 116 212 96 Z" fill="#a7bcb6"/>
+ <path d="M308 70 L348 88 C356 130 356 178 350 206 L324 200 C322 160 318 116 308 96 Z" fill="#97aca6"/>
+</g>
+<g class="st" data-at="0.5">
+ <path d="M226 284 c-4 24 0 40 16 42 c10 1 14 -8 14 -18 c0 10 4 19 14 18 c16 -2 20 -18 16 -42 c-18 8 -42 8 -60 0 z" fill="#97aca6"/>
+</g>
+<g class="st" data-at="0.65">
+ <rect x="224" y="82" width="72" height="110" fill="#5c756e"/>
+ <rect x="230" y="88" width="60" height="98" fill="none" stroke="#e8eeec" stroke-width="2"/>
+ <rect x="238" y="96" width="44" height="82" fill="none" stroke="#e8eeec" stroke-width="1.4"/>
+ <rect x="246" y="104" width="28" height="66" fill="none" stroke="#e8eeec" stroke-width="1.2"/>
+</g>
+<g class="st" data-at="0.82">
+ <rect x="226" y="84" width="68" height="106" fill="url(#gdots)"/>
+ <path d="M224 196 h72" stroke="#e8eeec" stroke-width="2" stroke-dasharray="2 4"/>
+</g>
+<g class="st" data-at="0.95">
+ <rect x="168" y="182" width="30" height="14" fill="#5c756e"/><rect x="322" y="182" width="30" height="14" fill="#5c756e"/>
+ <rect x="168" y="178" width="30" height="3" fill="#e8eeec"/><rect x="322" y="178" width="30" height="3" fill="#e8eeec"/>
+ <rect x="169" y="184" width="28" height="10" fill="url(#gdots)"/><rect x="323" y="184" width="28" height="10" fill="url(#gdots)"/>
+</g>
+<g class="st bob" data-at="0.05">
+ <rect x="428" y="66" width="18" height="30" rx="3" fill="#334b45"/><rect x="428" y="72" width="18" height="18" fill="#3f5850"/>
+ <path d="M452 58 q14 6 6 20" stroke="#5a5a5a" stroke-width="2" fill="none"/><path d="M458 52 a5 5 0 1 1 -6 8" stroke="#8a8a8a" stroke-width="2" fill="none"/>
+</g>
+</svg>`,
+
+pomegranate:`<svg viewBox="0 0 520 380" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9f1e4"/><stop offset="1" stop-color="#f4efe2"/></linearGradient></defs>
+<rect width="520" height="380" fill="url(#tsky)"/>
+<rect y="318" width="520" height="62" fill="#e2d3ae"/>
+<ellipse cx="260" cy="324" rx="90" ry="14" fill="#b98a55"/>
+<ellipse cx="260" cy="321" rx="60" ry="9" fill="#a67a45"/>
+<g class="st" data-at="0.08">
+ <path d="M258 318 C258 304 252 298 246 294 C254 294 258 300 260 306 C262 300 266 294 274 294 C268 298 262 304 262 318 Z" fill="#5C7A53"/>
+</g>
+<g class="st" data-at="0.28">
+ <path d="M256 318 L256 250 C256 240 260 234 266 230" stroke="#7B5638" stroke-width="7" fill="none" stroke-linecap="round"/>
+ <circle cx="268" cy="222" r="22" fill="#6a8a5f"/><circle cx="248" cy="232" r="16" fill="#5C7A53"/>
+</g>
+<g class="st" data-at="0.5">
+ <path d="M254 318 L254 210" stroke="#7B5638" stroke-width="11" fill="none" stroke-linecap="round"/>
+ <path d="M256 250 C240 240 228 240 216 232 M256 236 C272 226 284 226 296 218" stroke="#7B5638" stroke-width="6" fill="none" stroke-linecap="round"/>
+ <circle cx="212" cy="222" r="24" fill="#6a8a5f"/><circle cx="300" cy="208" r="26" fill="#5C7A53"/><circle cx="256" cy="192" r="30" fill="#6a8a5f"/>
+</g>
+<g class="st" data-at="0.7">
+ <circle cx="180" cy="190" r="30" fill="#5C7A53"/><circle cx="226" cy="158" r="34" fill="#4f7a4a"/><circle cx="288" cy="150" r="36" fill="#5C7A53"/><circle cx="336" cy="184" r="30" fill="#4f7a4a"/><circle cx="258" cy="128" r="30" fill="#6a8a5f"/>
+ <g fill="#7ea468"><ellipse cx="162" cy="170" rx="10" ry="4" transform="rotate(-30 162 170)"/><ellipse cx="354" cy="164" rx="10" ry="4" transform="rotate(28 354 164)"/><ellipse cx="240" cy="106" rx="10" ry="4" transform="rotate(-16 240 106)"/><ellipse cx="292" cy="108" rx="10" ry="4" transform="rotate(18 292 108)"/></g>
+</g>
+<g class="st" data-at="0.86">
+ <g><circle cx="206" cy="182" r="9" fill="#b13636"/><path d="M206 173 l2.5 -5 2.5 5 z" fill="#5C7A53"/></g>
+ <g><circle cx="262" cy="156" r="9" fill="#8E2C3B"/><path d="M262 147 l2.5 -5 2.5 5 z" fill="#5C7A53"/></g>
+ <g><circle cx="314" cy="176" r="9" fill="#b13636"/><path d="M314 167 l2.5 -5 2.5 5 z" fill="#5C7A53"/></g>
+ <g><circle cx="238" cy="206" r="8" fill="#8E2C3B"/><path d="M238 198 l2 -4.5 2 4.5 z" fill="#5C7A53"/></g>
+</g>
+<g class="st" data-at="0.97">
+ <g><circle cx="286" cy="198" r="8" fill="#b13636"/><path d="M286 190 l2 -4.5 2 4.5 z" fill="#5C7A53"/></g>
+ <g><circle cx="180" cy="152" r="8" fill="#8E2C3B"/><path d="M180 144 l2 -4.5 2 4.5 z" fill="#5C7A53"/></g>
+ <g><circle cx="330" cy="316" r="8" fill="#b13636"/><path d="M330 308 l2 -4.5 2 4.5 z" fill="#5C7A53"/></g>
+</g>
+</svg>`
+};
+
+/* ---------- daily activities + bubbles game (matching the app) ---------- */
+const ACTIVITIES=[
+ {k:'breathing', emo:'🌬️', bar:'#e88fa0', bg:'#fbe9ed', min:2, breath:true},
+ {k:'movement',  emo:'🚶', bar:'#7fb3e8', bg:'#eaf2fb', min:15},
+ {k:'hydration', emo:'💧', bar:'#8fc9a0', bg:'#eaf6ee', min:10},
+ {k:'bodyscan',  emo:'🧘', bar:'#c39fe0', bg:'#f3eefa', min:5},
+ {k:'mood',      emo:'🌤️', bar:'#e8c06f', bg:'#fbf3e2', min:2}
+];
+const BUBBLE_POS=[{l:6,t:10,s:88},{l:36,t:4,s:74},{l:64,t:12,s:94},{l:14,t:52,s:78},{l:42,t:44,s:98},{l:72,t:54,s:82},{l:28,t:74,s:70},{l:58,t:78,s:68}];
+const BUBBLE_BG=['#dcebdd','#f3dfe2','#e6e9f4','#f6ecd8','#e3eff0','#f0e3ef','#e9f0dd','#f4e6db'];
+let doneActs=new Set();
+let gFound=0;
+
+/* ---------- copy in three languages ---------- */
+const I18N = {
+ en:{
+  navJourneys:"Journeys", navAi:"Talk to WellMate", navGet:"Get WellMate",
+  heroEyebrow:"In your own language — Pashto · Dari · English",
+  heroTitle1:"Heard,", heroTitle2:"without being seen.",
+  heroSub:"A private, gentle companion — a place to be heard in your own language, whenever you need it. Your story stays yours.",
+  moodQ:"How are you feeling today?", moodHint:"However you are, WellMate meets you here — gently.",
+  moodAct:"Take a slow breath →",
+  heroCtaGet:"Get WellMate", heroCtaJourneys:"Choose your journey",
+  greet:"Peace be with you 🌿", scrLbl:"How are you feeling today?",
+  scrSuggT0:"Your journey", scrSuggD0:"Tend it a little, day by day",
+  phoneQuiet:{t:"A quiet moment", d:"Breathe, and be here a while"},
+  phoneTalk:"Talk to WellMate",
+  moods:{
+    calm:{label:"Calm", title:"Calm", activity:"A grateful breath", text:"A calm moment is worth staying in. Breathe slowly, and let yourself rest here."},
+    good:{label:"Good", title:"Good", activity:"Carry it with you", text:"A good day is a small treasure. Take one slow breath, and keep it close."},
+    tired:{label:"Tired", title:"Tired", activity:"Rest a little", text:"You've carried a lot. Be soft with yourself today — rest is allowed."},
+    anxious:{label:"Anxious", title:"Anxious", activity:"Come back to now", text:"Let's slow things down together, one small breath at a time. You're safe here."},
+    sad:{label:"Sad", title:"Heavy-hearted", activity:"You're not alone", text:"Whatever you're carrying, you don't have to hold it alone. I'm here with you."}
+  },
+  growKicker:"Your journey awaits", growTitle:"Choose it. Tend it. Watch it come to life.",
+  growLead:"Five journeys, drawn from home. Tend yours a little each day — woven, stitched, built, and grown over 14 days.",
+  journeys:{
+    carpet:{region:"Mazar", name:"Mazar Carpet", theme:"Care & Rebuilding", story:"In Mazar, a carpet is never hurried. Knot by knot, row by row, something beautiful takes shape — the way care, given daily, rebuilds us."},
+    minarets:{region:"Herat", name:"Minarets of Herat", theme:"Rebuilding & Strength", story:"The minarets of Herat have stood through centuries of storms. They rise the way we do — slowly, one day at a time, and with quiet strength."},
+    dress:{region:"Kabul", name:"Afghan Women's Dress", theme:"Expression & Identity", story:"Every stitch of an Afghan dress carries colour, memory and identity — a story a woman wears with pride, sewn a little each day."},
+    ghara:{region:"Kandahar", name:"Kandahari Ghara", theme:"Identity & Pride", story:"The Kandahari ghara is sewn with patience and worn with pride — identity, stitched carefully by hand, one day at a time."},
+    pomegranate:{region:"Kandahar", name:"Pomegranate Tree", theme:"Growth & Patience", story:"In Kandahar's orchards, the pomegranate tree takes its time — and its fruit is worth every season of patience."}
+  },
+  readAbout:n=>`Read about ${n} →`,
+  growBtn:"Tend it today", growReset:"Start over", tapHint:"…or simply tap the scene to tend it.",
+  growDay:n=>`Day ${n} · 14`,
+  growEnc:["Tap “Tend it today” — your journey begins.","It has begun. Gently does it.","Taking shape. Come back when you can.","A little more each day — steady progress.","Day by day, it grows stronger.","Halfway. Look how far you've quietly come.","Steady care, steady growth.","Almost there — stay with it."],
+  growDone:{title:"You tended it, all 14 days.", text:n=>`Your ${n} is complete. This is what a little care, every day, can make.`},
+  navDaily:"Every day",
+  dKicker:"A minute for yourself", dTitle:"Small daily practices, made gentle.",
+  dCheckT:"Daily Check-in", dCheckS:"Take a moment to check in with your body and mind.",
+  dGamesT:"Mindful Games", dGamesS:"Train your mind daily — small exercises for focus and feeling.",
+  acts:{breathing:"Slow Breathing", movement:"Mindful Movement", hydration:"Hydration Check", bodyscan:"Interactive Body Scan", mood:"Mood Calibration"},
+  minLabel:n=>`${n} min`, tryNow:"Try it now →",
+  dDone:n=>`${n} of 5 done`,
+  gName:"Positive Bubbles", gTag:"Positive thinking",
+  gHint:"Tap the gentle, uplifting words — let the rest drift by.",
+  gScore:n=>`Found ${n} · 5`,
+  gWin:"Beautifully done. Carry those words with you today 🌿",
+  gDrift:"Let that one drift by…",
+  gPos:["Hope","Calm","Courage","Kindness","Patience"], gNeg:["Worry","Doubt","Rush"],
+  mg:[{n:"Visualizing",tag:"Imagination & focus",min:2},{n:"Emotions Sorting",tag:"Emotional awareness",min:3}],
+  inApp:"in the app",
+  inviteCta:"Want an invite? Write to us →", privacyLink:"Privacy",
+  aiKicker:"Whenever you need someone", aiTitle:"Someone to talk to, day or night.",
+  aiSub:"A warm, private companion — here to listen, never to judge. Say what's on your heart.",
+  aiStatus:"Here for you · always private",
+  ai:[
+    {q:"I feel so alone", a:"You reached out — and that took courage. You are not alone in this; I'm here with you, and I'm listening. Tell me what today has felt like. There's no rush, and no judgement here."},
+    {q:"I can't tell anyone", a:"You don't have to carry it where anyone can see. Whatever you share here stays with you alone. You can say it in your own words, in your own language — I'm listening, gently."},
+    {q:"I can't sleep", a:"When sleep won't come, the heart is often still holding the day. Let's breathe out a little longer than we breathe in, and let tomorrow wait until tomorrow. I'll stay with you a while."}
+  ],
+  w1t:"Understood", w1d:"speaks your world",
+  w2t:"Private", w2d:"your story stays yours",
+  w3t:"Never alone", w3d:"day or night",
+  w4t:"By women who've been there",
+  getTitle:"Get WellMate.",
+  getSub:"The Android app is here — now in internal testing on Google Play, by invitation. Public release is coming very soon; iOS will follow.",
+  storePlay:"Now in internal testing", storeIos:"Coming soon",
+  getNote:"Testing is invite-only for now — public release very soon. In your language, always yours.",
+  safety:"If you ever feel unsafe or in crisis, please reach out to someone you trust, or a local helpline. Support is always one step away — you never have to face it alone.",
+  eco:"WellMate is a standalone companion, created within LEARNistan (part of the LEARN family). Your experience is of WellMate alone.",
+  breathReady:"Settle in…", breathIn:"Breathe in", breathHold:"Hold, gently", breathOut:"Breathe out", breathSub:"There's no rush", breathClose:"Close"
+ },
+
+ fa:{
+  navJourneys:"سفرها", navAi:"با WellMate صحبت کن", navGet:"دریافت WellMate",
+  heroEyebrow:"به زبانِ خودت — پښتو · دری · انگلیسی",
+  heroTitle1:"شنیده می‌شوی،", heroTitle2:"بی‌آنکه دیده شوی.",
+  heroSub:"یک همراهِ آرام و خصوصی — جایی برای شنیده‌شدن به زبانِ خودت، هر وقت که نیاز داشتی. قصه‌ات تنها مالِ توست.",
+  moodQ:"امروز چه احساسی داری؟", moodHint:"هر طور که هستی، WellMate همین‌جا و به‌آرامی کنارِ توست.",
+  moodAct:"یک نفسِ آهسته بکش ←",
+  heroCtaGet:"دریافت WellMate", heroCtaJourneys:"سفرت را انتخاب کن",
+  greet:"سلام بر تو 🌿", scrLbl:"امروز چه احساسی داری؟",
+  scrSuggT0:"سفرِ تو", scrSuggD0:"هر روز کمی پرورشش بده",
+  phoneQuiet:{t:"یک لحظهٔ آرام", d:"نفس بکش و کمی همین‌جا بمان"},
+  phoneTalk:"با WellMate صحبت کن",
+  moods:{
+    calm:{label:"آرام", title:"آرام", activity:"یک نفسِ سپاسگزار", text:"لحظهٔ آرام ارزشِ ماندن دارد. آهسته نفس بکش و بگذار همین‌جا بیاسایی."},
+    good:{label:"خوب", title:"خوب", activity:"با خودت نگهش دار", text:"روزِ خوب گنجِ کوچکی‌ست. یک نفسِ آهسته بکش و نزدیکِ خودت نگهش دار."},
+    tired:{label:"خسته", title:"خسته", activity:"کمی بیاسا", text:"بارِ زیادی برده‌ای. امروز با خودت نرم باش — آسودن رواست."},
+    anxious:{label:"مضطرب", title:"مضطرب", activity:"به همین لحظه برگرد", text:"بیا با هم آهسته‌تر شویم، یک نفسِ کوچک در هر بار. این‌جا در امانی."},
+    sad:{label:"غمگین", title:"دل‌سنگین", activity:"تنها نیستی", text:"هرچه بر دل داری، لازم نیست تنها نگهش داری. من کنارِ توام."}
+  },
+  growKicker:"سفرت در انتظار است", growTitle:"انتخابش کن. پرورشش بده. ببین جان می‌گیرد.",
+  growLead:"پنج سفر، برخاسته از وطن. هر روز کمی به سفرت برس — بافته، دوخته، ساخته و روییده در ۱۴ روز.",
+  journeys:{
+    carpet:{region:"مزار", name:"قالینِ مزار", theme:"مراقبت و بازسازی", story:"در مزار، قالین هرگز با عجله بافته نمی‌شود. گره به گره، رج به رج، چیزی زیبا شکل می‌گیرد — همان‌طور که مراقبتِ هر روزه ما را از نو می‌سازد."},
+    minarets:{region:"هرات", name:"منارهای هرات", theme:"بازسازی و قوت", story:"منارهای هرات قرن‌ها در برابرِ طوفان‌ها ایستاده‌اند. آن‌ها همان‌طور بالا می‌روند که ما — آهسته، روز به روز، و با قوتِ آرام."},
+    dress:{region:"کابل", name:"لباسِ زنانِ افغان", theme:"بیان و هویت", story:"هر کوکِ لباسِ افغانی رنگ، خاطره و هویت دارد — قصه‌ای که یک زن با غرور بر تن می‌کند، و هر روز کمی دوخته می‌شود."},
+    ghara:{region:"قندهار", name:"غرای قندهاری", theme:"هویت و غرور", story:"غرای قندهاری با صبر دوخته و با غرور پوشیده می‌شود — هویتی که با دست، روز به روز، کوک می‌خورد."},
+    pomegranate:{region:"قندهار", name:"درختِ انار", theme:"رشد و صبر", story:"در باغ‌های قندهار، درختِ انار وقتِ خودش را می‌گیرد — و میوه‌اش ارزشِ هر فصل صبر را دارد."}
+  },
+  readAbout:n=>`دربارهٔ ${n} بخوان ←`,
+  growBtn:"امروز به آن برس", growReset:"از نو شروع کن", tapHint:"…یا فقط روی صحنه بزن تا پرورشش دهی.",
+  growDay:n=>`روزِ ${n.toLocaleString('fa')} · ۱۴`,
+  growEnc:["روی «امروز به آن برس» بزن — سفرت آغاز می‌شود.","آغاز شد. آهسته و آرام.","دارد شکل می‌گیرد. هر وقت توانستی برگرد.","هر روز کمی بیشتر — پیشرفتِ پیوسته.","روز به روز قوی‌تر می‌شود.","به نیمهٔ راه رسیدی. ببین چه آرام پیش آمده‌ای.","مراقبتِ پیوسته، رشدِ پیوسته.","نزدیکِ پایان — همراهش بمان."],
+  growDone:{title:"هر ۱۴ روز به آن رسیدی.", text:n=>`${n} تو کامل شد. این چیزی‌ست که کمی مراقبت، هر روز، می‌سازد.`},
+  navDaily:"هر روز",
+  dKicker:"یک دقیقه برای خودت", dTitle:"تمرین‌های کوچکِ روزانه، به‌نرمی.",
+  dCheckT:"چک‌اینِ روزانه", dCheckS:"لحظه‌ای به تن و ذهنت سر بزن.",
+  dGamesT:"بازی‌های ذهن‌آگاه", dGamesS:"هر روز ذهنت را نرم تمرین بده — برای تمرکز و احساس.",
+  acts:{breathing:"تنفسِ آهسته", movement:"حرکتِ آگاهانه", hydration:"نوشیدنِ آب", bodyscan:"گوش‌دادن به بدن", mood:"تنظیمِ حال"},
+  minLabel:n=>`${n.toLocaleString('fa')} دقیقه`, tryNow:"همین حالا امتحان کن ←",
+  dDone:n=>`${n.toLocaleString('fa')} از ۵ انجام شد`,
+  gName:"حباب‌های مثبت", gTag:"اندیشهٔ مثبت",
+  gHint:"کلمه‌های ملایم و امیدبخش را لمس کن — بگذار بقیه بگذرند.",
+  gScore:n=>`${n.toLocaleString('fa')} · ۵ پیدا شد`,
+  gWin:"چه زیبا. امروز این کلمه‌ها را با خودت ببر 🌿",
+  gDrift:"بگذار آن یکی بگذرد…",
+  gPos:["امید","آرامش","شجاعت","مهربانی","صبر"], gNeg:["نگرانی","تردید","عجله"],
+  mg:[{n:"تجسم",tag:"تخیل و تمرکز",min:2},{n:"مرتب‌سازی احساسات",tag:"آگاهیِ احساسی",min:3}],
+  inApp:"در اپ",
+  inviteCta:"دعوت‌نامه می‌خواهی؟ برای ما بنویس ←", privacyLink:"حریم خصوصی",
+  aiKicker:"هر وقت به کسی نیاز داشتی", aiTitle:"کسی برای گفتن، روز یا شب.",
+  aiSub:"یک همراهِ گرم و خصوصی — این‌جا برای شنیدن، نه قضاوت. آنچه بر دل داری بگو.",
+  aiStatus:"کنارِ تو · همیشه خصوصی",
+  ai:[
+    {q:"خیلی احساسِ تنهایی می‌کنم", a:"دست دراز کردی — و این شهامت می‌خواست. در این تنها نیستی؛ من کنارِ توام و می‌شنوم. بگو امروز چه‌طور گذشت. عجله‌ای نیست، و این‌جا هیچ قضاوتی نیست."},
+    {q:"به کسی نمی‌توانم بگویم", a:"لازم نیست آن را جایی که دیده شود حمل کنی. هرچه این‌جا بگویی تنها مالِ توست. می‌توانی به کلماتِ خودت، به زبانِ خودت بگویی — من به‌آرامی می‌شنوم."},
+    {q:"خوابم نمی‌برد", a:"وقتی خواب نمی‌آید، دل اغلب هنوز بارِ روز را نگه داشته. بیا بازدم را کمی بلندتر از دم کنیم، و بگذاریم فردا تا فردا صبر کند. کمی کنارِ تو می‌مانم."}
+  ],
+  w1t:"درک‌شده", w1d:"دنیایت را می‌فهمد",
+  w2t:"خصوصی", w2d:"قصه‌ات مالِ توست",
+  w3t:"هرگز تنها", w3d:"روز یا شب",
+  w4t:"به‌دستِ زنانی که آن‌جا بوده‌اند",
+  getTitle:"دریافت WellMate.",
+  getSub:"اپِ اندروید آماده است — اکنون در آزمایشِ داخلی در Google Play، با دعوت. نسخهٔ عمومی خیلی زود منتشر می‌شود؛ iOS هم در راه است.",
+  storePlay:"اکنون در آزمایشِ داخلی", storeIos:"به‌زودی",
+  getNote:"آزمایش فعلاً با دعوت است — انتشارِ عمومی خیلی زود. به زبانِ خودت، همیشه مالِ تو.",
+  safety:"اگر هر وقت احساسِ ناامنی یا بحران کردی، لطفاً با کسی که به او اعتماد داری یا یک خطِ کمکِ محلی تماس بگیر. حمایت همیشه یک قدم دورتر است — هرگز لازم نیست تنها با آن روبه‌رو شوی.",
+  eco:"WellMate یک همراهِ مستقل است که در دلِ LEARNistan (بخشی از خانوادهٔ LEARN) ساخته شده. تجربهٔ تو تنها از آنِ WellMate است.",
+  breathReady:"آرام بگیر…", breathIn:"نفس بکش", breathHold:"به‌آرامی نگه دار", breathOut:"بازدم", breathSub:"عجله‌ای نیست", breathClose:"بستن"
+ },
+
+ ps:{
+  navJourneys:"سفرونه", navAi:"له WellMate سره خبرې", navGet:"WellMate ترلاسه کړئ",
+  heroEyebrow:"ستا په خپله ژبه — پښتو · دري · انګلیسي",
+  heroTitle1:"اورېدل کېږې،", heroTitle2:"پرته له دې چې ولیدل شې.",
+  heroSub:"یو ارام او محرم ملګری — د خپلې ژبې په ژبه د اورېدلو ځای، هر کله چې اړتیا لرې. ستا کیسه یوازې ستا ده.",
+  moodQ:"نن څنګه احساس کوې؟", moodHint:"په هر حال کې چې يې، WellMate همدلته او په ارامۍ درسره دی.",
+  moodAct:"یوه ورو ساه واخله ←",
+  heroCtaGet:"WellMate ترلاسه کړئ", heroCtaJourneys:"خپل سفر وټاکه",
+  greet:"سلام درباندې 🌿", scrLbl:"نن څنګه احساس کوې؟",
+  scrSuggT0:"ستا سفر", scrSuggD0:"هره ورځ یې لږ روزنه کړه",
+  phoneQuiet:{t:"یوه ارامه شېبه", d:"ساه واخله او لږ همدلته پاتې شه"},
+  phoneTalk:"له WellMate سره خبرې وکړه",
+  moods:{
+    calm:{label:"ارام", title:"ارام", activity:"د شکر ساه", text:"ارامه شېبه د پاتې کېدو ارزښت لري. ورو ساه واخله او پرېږده چې همدلته ارام شې."},
+    good:{label:"ښه", title:"ښه", activity:"له ځان سره یې وساته", text:"ښه ورځ یوه وړه خزانه ده. یوه ورو ساه واخله او نږدې یې وساته."},
+    tired:{label:"ستړی", title:"ستړی", activity:"لږ ارام وکړه", text:"ډېر بار دې وړی. نن له ځان سره نرم اوسه — ارام روا دی."},
+    anxious:{label:"اندېښمن", title:"اندېښمن", activity:"همدې شېبې ته راشه", text:"راځه چې سره ورو شو، هر ځل یوه وړوکې ساه. ته دلته خوندي يې."},
+    sad:{label:"خپه", title:"خپه‌زړی", activity:"ته یوازې نه يې", text:"هرڅه چې پر زړه لرې، اړ نه يې چې یوازې یې وساتې. زه درسره یم."}
+  },
+  growKicker:"ستا سفر په تمه دی", growTitle:"ویې ټاکه. روزنه یې کړه. وګوره چې ژوندی کیږي.",
+  growLead:"پنځه سفرونه، له کوره اخیستل شوي. هره ورځ خپل سفر ته لږ ورسه — اوبدل شوی، ګنډل شوی، جوړ شوی او لوی شوی په ۱۴ ورځو کې.",
+  journeys:{
+    carpet:{region:"مزار", name:"د مزار قالین", theme:"پاملرنه او بیارغونه", story:"په مزار کې قالین هیڅکله په بیړه نه اوبدل کیږي. غوټه په غوټه، لیکه په لیکه، یو ښکلی شی جوړېږي — لکه څنګه چې ورځنۍ پاملرنه موږ بیا جوړوي."},
+    minarets:{region:"هرات", name:"د هرات منارې", theme:"بیارغونه او ځواک", story:"د هرات منارې پېړۍ پېړۍ د طوفانونو پر وړاندې ولاړې دي. هغوی هماغسې پورته کیږي لکه موږ — ورو، ورځ په ورځ، او په ارام ځواک."},
+    dress:{region:"کابل", name:"د افغان ښځو جامه", theme:"څرګندونه او پېژندنه", story:"د افغاني جامې هر ګنډ رنګ، یاد او پېژندنه لري — هغه کیسه چې یوه ښځه یې په ویاړ اغوندي، او هره ورځ لږه ګنډل کیږي."},
+    ghara:{region:"کندهار", name:"کندهارۍ غاړه", theme:"پېژندنه او ویاړ", story:"کندهارۍ غاړه په صبر ګنډل کیږي او په ویاړ اغوستل کیږي — پېژندنه چې په لاس، ورځ په ورځ، ګنډل کیږي."},
+    pomegranate:{region:"کندهار", name:"د انار ونه", theme:"وده او صبر", story:"د کندهار په باغونو کې د انار ونه خپل وخت اخلي — او مېوه یې د صبر د هر فصل ارزښت لري."}
+  },
+  readAbout:n=>`د ${n} په اړه ولوله ←`,
+  growBtn:"نن ورته ورسه", growReset:"بیا پیل کړه", tapHint:"…یا یوازې صحنه ووهه چې روزنه یې کړې.",
+  growDay:n=>`ورځ ${n.toLocaleString()} · ۱۴`,
+  growEnc:["«نن ورته ورسه» ووهه — سفر دې پیلېږي.","پیل شو. ورو ورو.","شکل نیسي. کله چې وکولای شې راشه.","هره ورځ لږ نور — دوامداره پرمختګ.","ورځ په ورځ پیاوړی کیږي.","نیمايي ته ورسېدې. وګوره څومره په ارامۍ راغلې.","دوامداره پاملرنه، دوامداره وده.","نژدې دی — ورسره پاتې شه."],
+  growDone:{title:"ټولې ۱۴ ورځې دې ورته ورسېدې.", text:n=>`ستا ${n} بشپړ شو. دا هغه څه دي چې لږه پاملرنه، هره ورځ، جوړوي.`},
+  navDaily:"هره ورځ",
+  dKicker:"یوه دقیقه د ځان لپاره", dTitle:"وړوکي ورځني تمرینونه، په نرمۍ.",
+  dCheckT:"ورځنی چک", dCheckS:"یوه شېبه خپل تن او ذهن ته پام وکړه.",
+  dGamesT:"ذهن‌پوه لوبې", dGamesS:"هره ورځ خپل ذهن نرم وروزه — د تمرکز او احساس لپاره.",
+  acts:{breathing:"ورو ساه اخیستل", movement:"ارام خوځښت", hydration:"د اوبو څښل", bodyscan:"بدن ته پام", mood:"د حال برابرول"},
+  minLabel:n=>`${n} دقیقې`, tryNow:"همدا اوس یې وآزمویه ←",
+  dDone:n=>`${n} له ۵ بشپړ شول`,
+  gName:"مثبتې بلبلې", gTag:"مثبت فکر",
+  gHint:"نرمې، هیله‌بښونکې کلمې ووهه — نور پرېږده چې تېر شي.",
+  gScore:n=>`${n} · ۵ وموندل شول`,
+  gWin:"ډېر ښکلی. نن دا کلمې له ځان سره یوسه 🌿",
+  gDrift:"پرېږده چې هغه تېره شي…",
+  gPos:["هیله","ارامي","زړورتیا","مهرباني","صبر"], gNeg:["اندېښنه","شک","بیړه"],
+  mg:[{n:"تصور",tag:"تصور او تمرکز",min:2},{n:"د احساساتو ترتیب",tag:"احساسي پوهه",min:3}],
+  inApp:"په اپ کې",
+  inviteCta:"بلنه غواړې؟ موږ ته ولیکه ←", privacyLink:"محرمیت",
+  aiKicker:"هر کله چې چا ته اړتیا لرې", aiTitle:"د خبرو لپاره څوک، ورځ یا شپه.",
+  aiSub:"یو ګرم، محرم ملګری — د اورېدو لپاره، نه د قضاوت. هغه څه چې پر زړه لرې ووایه.",
+  aiStatus:"ستا لپاره · تل محرم",
+  ai:[
+    {q:"ډېر یوازیتوب احساسوم", a:"لاس دې راوغځاوه — او دا زړورتیا وه. په دې کې یوازې نه يې؛ زه درسره یم او اورم دې. ووایه نن ورځ څنګه تېره شوه. بیړه نشته، او دلته هیڅ قضاوت نشته."},
+    {q:"چا ته یې نشم ویلی", a:"اړتیا نشته چې هغه ځای یې یوسې چې څوک یې وویني. هرڅه چې دلته ووایې یوازې ستا دي. په خپلو کلماتو، په خپله ژبه یې ویلی شې — زه په ارامۍ اورم."},
+    {q:"خوب نه راځي", a:"کله چې خوب نه راځي، زړه ډېری وخت لا د ورځې بار ساتي. راځه چې ساه لږ اوږده وباسو لکه څنګه چې یې اخلو، او سبا دې تر سبا پرېږدو. لږ درسره پاتې کیږم."}
+  ],
+  w1t:"پوه شوی", w1d:"ستا نړۍ پوهیږي",
+  w2t:"محرم", w2d:"ستا کیسه ستا ده",
+  w3t:"هیڅکله یوازې نه", w3d:"ورځ یا شپه",
+  w4t:"د هغو ښځو لخوا چې هلته وې",
+  getTitle:"WellMate ترلاسه کړئ.",
+  getSub:"د اندروید اپ چمتو دی — اوس په Google Play کې په داخلي ازموینه کې، په بلنه. عمومي خپرېدل ډېر ژر دي؛ iOS به هم راشي.",
+  storePlay:"اوس په داخلي ازموینه کې", storeIos:"ژر راځي",
+  getNote:"ازموینه اوس مهال په بلنه ده — عمومي خپرېدل ډېر ژر. ستا په ژبه، تل ستا.",
+  safety:"که کله هم د ناامنۍ یا بحران احساس وکړې، مهرباني وکړه له داسې چا سره چې پرې باور لرې یا محلي مرستندویه کرښې سره اړیکه ونیسه. ملاتړ تل یو قدم لرې دی — هیڅکله اړ نه يې چې یوازې ورسره مخ شې.",
+  eco:"WellMate یو خپلواک ملګری دی چې د LEARNistan (د LEARN کورنۍ برخه) دننه جوړ شوی. ستا تجربه یوازې د WellMate ده.",
+  breathReady:"ارام شه…", breathIn:"ساه دننه کړه", breathHold:"په ارامۍ ونیسه", breathOut:"ساه وباسه", breathSub:"بیړه نشته", breathClose:"بندول"
+ }
+};
+
+/* ---------- state ---------- */
+let lang = (navigator.language||'en').slice(0,2); if(!I18N[lang]) lang='en';
+let currentMood = null;
+let currentJourney = 'carpet';
+let day = 0;
+const $ = s => document.querySelector(s);
+
+/* ---------- render ---------- */
+function renderStatic(){
+  const t = I18N[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang==='en') ? 'ltr' : 'rtl';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); if(typeof t[k]==='string') el.textContent=t[k]; });
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  $('#aiTitle').textContent=t.aiTitle; $('#aiSub').textContent=t.aiSub; $('#aiStatus').textContent=t.aiStatus;
+}
+
+function renderMoods(){
+  const t=I18N[lang], box=$('#moods'); box.innerHTML='';
+  Object.keys(MOOD_EMOJI).forEach(k=>{
+    const b=document.createElement('button'); b.className='mood'+(currentMood===k?' active':''); b.dataset.m=k;
+    b.innerHTML=`<span class="emo">${MOOD_EMOJI[k]}</span><span class="ml">${t.moods[k].label}</span>`;
+    b.addEventListener('click',()=>selectMood(k)); box.appendChild(b);
+  });
+  const sm=$('#scr-moods'); sm.innerHTML='';
+  Object.keys(MOOD_EMOJI).forEach(k=>{ const s=document.createElement('span'); s.textContent=MOOD_EMOJI[k]; if(currentMood===k) s.classList.add('on'); sm.appendChild(s); });
+}
+
+function selectMood(k){
+  currentMood=k; const t=I18N[lang];
+  document.documentElement.style.setProperty('--tint', MOOD_TINT[k]);
+  document.querySelectorAll('.mood').forEach(m=>m.classList.toggle('active', m.dataset.m===k));
+  document.querySelectorAll('#scr-moods span').forEach((s,i)=>s.classList.toggle('on', Object.keys(MOOD_EMOJI)[i]===k));
+  const m=t.moods[k];
+  $('#mr-pill').textContent=m.activity; $('#mr-title').textContent=`${MOOD_EMOJI[k]} ${m.title}`; $('#mr-text').textContent=m.text;
+  $('#moodResp').classList.add('show');
+  $('#scr-sugg-t').textContent=m.activity; $('#scr-sugg-d').textContent=m.text;
+}
+
+function renderChips(){
+  const t=I18N[lang], box=$('#jChips'); box.innerHTML='';
+  JOURNEY_ORDER.forEach(k=>{
+    const j=t.journeys[k];
+    const c=document.createElement('button'); c.className='jchip'+(currentJourney===k?' active':''); c.dataset.j=k;
+    c.innerHTML=`<span class="mini">${MINIS[k]}</span><span><b>${j.name}</b><small>${j.region} · ${j.theme}</small></span>`;
+    c.addEventListener('click',()=>selectJourney(k));
+    box.appendChild(c);
+  });
+}
+
+function selectJourney(k){
+  currentJourney=k; const t=I18N[lang], j=t.journeys[k];
+  document.querySelectorAll('.jchip').forEach(c=>c.classList.toggle('active', c.dataset.j===k));
+  $('#growName').textContent=j.name; $('#growTheme').textContent=j.theme;
+  $('#readAbout').textContent=t.readAbout(j.name);
+  const st=$('#storyText'); st.hidden=true; st.textContent=j.story;
+  day=0;
+  renderScene();
+}
+
+function renderScene(){
+  $('#sceneArt').innerHTML = SCENES[currentJourney];
+  // allow CSS transitions after injection
+  requestAnimationFrame(()=>requestAnimationFrame(updateGrow));
+}
+
+function buildDots(){ const d=$('#dots'); d.innerHTML=''; for(let i=0;i<14;i++){ d.appendChild(document.createElement('i')); } }
+
+function updateGrow(){
+  const t=I18N[lang], p=day/14, art=$('#sceneArt');
+  art.querySelectorAll('.st').forEach(g=>{ g.classList.toggle('on', p >= parseFloat(g.dataset.at)); });
+  if(currentJourney==='carpet'){
+    const wr=art.querySelector('#weaveRect'), sh=art.querySelector('#shuttle');
+    if(wr){ const h=10+(258-10)*p; wr.setAttribute('height',h);
+      if(sh){ sh.setAttribute('transform',`translate(0,${60+h})`); sh.style.opacity=(p>0&&p<1)?'1':'0'; } }
+  }
+  $('#sceneDay').textContent=t.growDay(day);
+  $('#scr-day').textContent=t.growDay(day);
+  document.querySelectorAll('#dots i').forEach((x,i)=>x.classList.toggle('on', i<day));
+  const enc=t.growEnc; $('#growEnc').textContent=enc[Math.min(Math.floor(day/2), enc.length-1)];
+  const done=$('#sceneDone');
+  if(day>=14){ done.classList.add('show'); $('#doneTitle').textContent=t.growDone.title; $('#doneText').textContent=t.growDone.text(t.journeys[currentJourney].name); }
+  else done.classList.remove('show');
+}
+
+function completeDay(){ if(day>=14) return; day++; updateGrow(); sparkle(); }
+function resetJourney(){ day=0; renderScene(); }
+
+function sparkle(target){
+  const scene=target||$('#scene');
+  for(let i=0;i<9;i++){
+    const s=document.createElement('div'); s.className='spark';
+    s.style.left=(38+Math.random()*24)+'%'; s.style.bottom=(24+Math.random()*36)+'%';
+    s.style.background=Math.random()>.5?'#C8893A':'#C17A82';
+    scene.appendChild(s);
+    const dx=(Math.random()*70-35), dy=-(40+Math.random()*70);
+    s.animate([{transform:'translate(0,0)',opacity:1},{transform:`translate(${dx}px,${dy}px)`,opacity:0}],{duration:900+Math.random()*500,easing:'ease-out'});
+    setTimeout(()=>s.remove(),1400);
+  }
+}
+
+function renderPhone(){
+  const t=I18N[lang];
+  $('#scr-p1t').textContent=t.phoneQuiet.t; $('#scr-p1d').textContent=t.phoneQuiet.d;
+  $('#scr-cta').textContent='💬 '+t.phoneTalk;
+  $('#scr-greet').textContent=t.greet; $('#scr-lbl').textContent=t.scrLbl;
+  if(!currentMood){ $('#scr-sugg-t').textContent=t.scrSuggT0; $('#scr-sugg-d').textContent=t.scrSuggD0; }
+}
+
+function renderDaily(){
+  const t=I18N[lang], list=$('#actList'); list.innerHTML='';
+  ACTIVITIES.forEach(a=>{
+    const row=document.createElement('div'); row.className='act'+(doneActs.has(a.k)?' done':''); row.style.background=a.bg;
+    row.innerHTML=`<span class="bar" style="background:${a.bar}"></span><span class="aic">${a.emo}</span><span class="atx"><b>${t.acts[a.k]}</b><small>${t.minLabel(a.min)}${a.breath?` · <span class="try">${t.tryNow}</span>`:''}</small></span><span class="chk">✓</span>`;
+    row.tabIndex=0; row.setAttribute('role','checkbox'); row.setAttribute('aria-checked', String(doneActs.has(a.k)));
+    row.addEventListener('click',()=>{
+      if(doneActs.has(a.k)) doneActs.delete(a.k); else doneActs.add(a.k);
+      row.classList.toggle('done'); row.setAttribute('aria-checked', String(doneActs.has(a.k))); updateDaily();
+    });
+    row.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); row.click(); } });
+    const tr=row.querySelector('.try'); if(tr) tr.addEventListener('click',e=>{ e.stopPropagation(); openBreath(); });
+    list.appendChild(row);
+  });
+  updateDaily();
+}
+function updateDaily(){
+  $('#dpCount').textContent=I18N[lang].dDone(doneActs.size);
+  $('#dpFill').style.width=(doneActs.size/ACTIVITIES.length*100)+'%';
+}
+
+function renderGame(){
+  const t=I18N[lang]; gFound=0;
+  $('#gScore').textContent=t.gScore(0); $('#gMsg').textContent='';
+  const stage=$('#gstage'); stage.innerHTML='';
+  const words=[...t.gPos.map(w=>({w,good:true})), ...t.gNeg.map(w=>({w,good:false}))];
+  words.sort(()=>Math.random()-.5);
+  words.forEach((it,i)=>{
+    const p=BUBBLE_POS[i], b=document.createElement('div'); b.className='bubble';
+    b.style.cssText=`left:${p.l}%;top:${p.t}%;width:${p.s}px;height:${p.s}px;background:${BUBBLE_BG[i]};font-size:${Math.max(12,Math.round(p.s/6.5))}px;--d:${(3+Math.random()*2).toFixed(1)}s;animation-delay:-${(Math.random()*2).toFixed(1)}s`;
+    b.textContent=it.w;
+    b.tabIndex=0; b.setAttribute('role','button');
+    b.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); b.click(); } });
+    b.addEventListener('click',()=>{
+      if(b.classList.contains('pop')) return;
+      if(it.good){
+        b.classList.add('pop'); gFound++; $('#gScore').textContent=t.gScore(gFound);
+        if(gFound>=t.gPos.length){ $('#gMsg').textContent=t.gWin; sparkle(stage); }
+      } else {
+        b.classList.add('no'); setTimeout(()=>b.classList.remove('no'),450);
+        $('#gMsg').textContent=t.gDrift;
+        setTimeout(()=>{ if($('#gMsg').textContent===t.gDrift) $('#gMsg').textContent=''; },1600);
+      }
+    });
+    stage.appendChild(b);
+  });
+  $('#mg1n').textContent=t.mg[0].n; $('#mg1t').textContent=t.mg[0].tag; $('#mg1d').textContent=`${t.minLabel(t.mg[0].min)} · ${t.inApp}`;
+  $('#mg2n').textContent=t.mg[1].n; $('#mg2t').textContent=t.mg[1].tag; $('#mg2d').textContent=`${t.minLabel(t.mg[1].min)} · ${t.inApp}`;
+}
+
+let aiTimer=null;
+function renderAI(){
+  const t=I18N[lang], pr=$('#prompts'); pr.innerHTML=''; $('#bubbles').innerHTML='';
+  t.ai.forEach((item,i)=>{ const b=document.createElement('button'); b.textContent=item.q; b.addEventListener('click',()=>askAI(i)); pr.appendChild(b); });
+}
+function askAI(i){
+  const t=I18N[lang], item=t.ai[i], box=$('#bubbles');
+  if(aiTimer) clearInterval(aiTimer);
+  box.innerHTML=`<div class="bub me">${item.q}</div><div class="bub wm typing" id="aiAns"></div>`;
+  const ans=$('#aiAns'); const text=item.a; let n=0;
+  aiTimer=setInterval(()=>{ n++; ans.textContent=text.slice(0,n); if(n>=text.length){ clearInterval(aiTimer); ans.classList.remove('typing'); } }, 20);
+}
+
+let bTimers=[];
+function clearBreath(){ bTimers.forEach(clearTimeout); bTimers=[]; }
+function runBreath(){
+  const t=I18N[lang], c=$('#bCircle'), txt=$('#bText'), sub=$('#bSub'); sub.textContent=t.breathSub;
+  const cycle=()=>{
+    txt.textContent=t.breathReady; c.style.transition='transform 1.5s ease'; c.style.transform='scale(.55)';
+    bTimers.push(setTimeout(()=>{ txt.textContent=t.breathIn; c.style.transition='transform 4s ease-in-out'; c.style.transform='scale(1)'; },1500));
+    bTimers.push(setTimeout(()=>{ txt.textContent=t.breathHold; },5500));
+    bTimers.push(setTimeout(()=>{ txt.textContent=t.breathOut; c.style.transition='transform 6s ease-in-out'; c.style.transform='scale(.55)'; },7500));
+    bTimers.push(setTimeout(cycle,13500));
+  }; cycle();
+}
+function openBreath(){ $('#breathOverlay').classList.add('open'); document.body.style.overflow='hidden'; runBreath(); }
+function closeBreath(){ $('#breathOverlay').classList.remove('open'); document.body.style.overflow=''; clearBreath(); }
+
+function applyLang(l){
+  lang = I18N[l] ? l : 'en';
+  renderStatic(); renderMoods(); renderChips(); renderPhone(); renderAI(); renderDaily(); renderGame();
+  const j=I18N[lang].journeys[currentJourney];
+  $('#growName').textContent=j.name; $('#growTheme').textContent=j.theme;
+  $('#readAbout').textContent=I18N[lang].readAbout(j.name);
+  const st=$('#storyText'); st.textContent=j.story;
+  updateGrow();
+  if(currentMood) selectMood(currentMood);
+}
+
+/* ---------- wiring ---------- */
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+$('#completeDay').addEventListener('click',completeDay);
+$('#resetJourney').addEventListener('click',resetJourney);
+$('#scene').addEventListener('click',()=>{ if(day<14) completeDay(); });
+$('#readAbout').addEventListener('click',()=>{ const st=$('#storyText'); st.hidden=!st.hidden; });
+$('#mr-act').addEventListener('click',openBreath);
+$('#closeBreath').addEventListener('click',closeBreath);
+$('#scr-cta').addEventListener('click',()=>$('#ai').scrollIntoView({behavior:'smooth'}));
+$('#gReplay').addEventListener('click',renderGame);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeBreath(); });
+$('#year').textContent=new Date().getFullYear();
+const INVITE_EMAIL='info@learnafghan.org';
+$('#inviteLink').href='mailto:'+INVITE_EMAIL+'?subject=WellMate%20invite%20request';
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+buildDots();
+applyLang(lang);
+renderScene();
+</script>
+</body>
+</html>
