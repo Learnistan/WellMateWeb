@@ -275,6 +275,15 @@
     transform:scale(.55); transition:transform 4s ease-in-out; box-shadow:0 0 60px rgba(200,137,58,.55);}
   .b-text{font-family:var(--font-head); font-size:25px; font-weight:600; min-height:34px;} .b-sub{color:rgba(255,255,255,.72); margin-top:6px; font-size:14px;}
 
+
+  /* LIVE FIGMA APP PREVIEW */
+  .live-phone-link{display:block;color:inherit;text-decoration:none;cursor:pointer;position:relative;transition:filter .22s ease;}
+  .live-phone-link:hover{filter:drop-shadow(0 20px 26px rgba(42,33,30,.22));}
+  .live-phone-link:focus-visible{outline:3px solid var(--rose);outline-offset:8px;}
+  .live-badge{position:absolute;left:50%;bottom:66px;z-index:8;transform:translateX(-50%);display:flex;align-items:center;gap:8px;white-space:nowrap;padding:8px 13px;border-radius:999px;background:rgba(255,253,249,.94);color:var(--plum);border:1px solid rgba(110,74,85,.14);box-shadow:0 10px 28px rgba(42,33,30,.18);backdrop-filter:blur(8px);font-size:12px;font-weight:700;pointer-events:none;}
+  .live-badge-dot{width:8px;height:8px;border-radius:50%;background:#55a96c;box-shadow:0 0 0 0 rgba(85,169,108,.5);animation:livePulse 1.8s infinite;}
+  @keyframes livePulse{70%{box-shadow:0 0 0 8px rgba(85,169,108,0);}100%{box-shadow:0 0 0 0 rgba(85,169,108,0);}}
+
   @media(prefers-reduced-motion:reduce){*{animation:none !important;} .b-circle,.scene .st,.hero{transition:none !important;} html{scroll-behavior:auto;}}
 </style>
 </head>
@@ -331,7 +340,7 @@
 
       <div class="phone-stage">
         <div class="arch" aria-hidden="true"></div>
-        <div class="phone" aria-label="WellMate app preview">
+        <a class="phone live-phone-link" href="https://muse-test-93560592.figma.site" target="_blank" rel="noopener noreferrer" aria-label="Open the live WellMate app preview">
           <div class="notch"></div>
           <div class="screen">
             <div class="scr-head">
@@ -349,7 +358,8 @@
             </div>
             <div class="scr-cta" id="scr-cta">💬 Talk to WellMate</div>
           </div>
-        </div>
+          <span class="live-badge" aria-hidden="true"><span class="live-badge-dot"></span>Try WellMate live</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1143,7 +1153,11 @@ $('#scene').addEventListener('click',()=>{ if(day<14) completeDay(); });
 $('#readAbout').addEventListener('click',()=>{ const st=$('#storyText'); st.hidden=!st.hidden; });
 $('#mr-act').addEventListener('click',openBreath);
 $('#closeBreath').addEventListener('click',closeBreath);
-$('#scr-cta').addEventListener('click',()=>$('#ai').scrollIntoView({behavior:'smooth'}));
+$('#scr-cta').addEventListener('click',(e)=>{
+  e.preventDefault();
+  e.stopPropagation();
+  window.open('https://muse-test-93560592.figma.site','_blank','noopener,noreferrer');
+});
 $('#gReplay').addEventListener('click',renderGame);
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeBreath(); });
 $('#year').textContent=new Date().getFullYear();
