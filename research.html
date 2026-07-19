@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research &amp; Evidence — WellMate</title>
+<meta name="description" content="The science behind WellMate: an empirical validation and literature mapping framework connecting every app feature to established psychological constructs and evidence-based mental health research." />
+<meta name="theme-color" content="#6E4A55" />
+<link rel="canonical" href="https://www.wellmate.app/research.html" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 90'%3E%3Cpath d='M40 20C40 14 44 9 49 7 47 12 47 16 45 19Z' fill='%237D6A4F'/%3E%3Cpath d='M40 19C20 19 14 36 14 52 14 72 27 84 40 84 53 84 66 72 66 52 66 36 60 19 40 19Z' fill='%23C17A82'/%3E%3Cpath d='M40 64C36 58 28 56 28 49 28 45 31 43 34 43 37 43 39 45 40 47 41 45 43 43 46 43 49 43 52 45 52 49 52 56 44 58 40 64Z' fill='%23F5EFE3'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cotton:#F5EFE3; --rosewater:#EBD7D6; --paper:#FFFDF9; --ink:#2A211E; --body:#4a423d; --muted:#8a8079;
+    --rose:#C17A82; --terra:#A85A44; --saffron:#C8893A; --plum:#6E4A55; --line:#e7ddcf;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--cotton); color:var(--body);
+    font-family:'Inter','Vazirmatn',system-ui,sans-serif; font-size:16px; line-height:1.68; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:800px; margin:0 auto; padding:0 22px 70px;}
+
+  header.site{position:sticky; top:0; z-index:10; background:rgba(245,239,227,.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); padding:13px 22px;}
+  header.site .inner{max-width:800px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);}
+  .brand svg{width:34px; height:27px;}
+  .brand b{font-family:'Fraunces',serif; font-weight:600; font-size:20px;}
+  .back{font-size:14px; color:var(--terra); text-decoration:none; font-weight:600;}
+  .back:hover{text-decoration:underline;}
+
+  h1{font-family:'Fraunces',serif; font-weight:600; font-size:clamp(34px,6vw,50px); line-height:1.05; letter-spacing:-.01em; color:var(--ink); margin:52px 0 8px;}
+  .subtitle{font-family:'Fraunces',serif; font-style:italic; font-size:clamp(17px,3vw,21px); color:var(--rose); margin:0 0 10px;}
+  .eff{font-size:14px; color:var(--muted);}
+  p{margin:12px 0;}
+  strong{color:var(--ink); font-weight:600;}
+  a{color:var(--terra);}
+  .intro{margin:28px 0 0; font-size:16.5px;}
+
+  .callout{background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--saffron); border-radius:12px; padding:16px 20px; margin:20px 0; font-size:15px;}
+
+  .toc{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:20px 26px; margin:26px 0;}
+  .toc h2{font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; font-weight:600;}
+  .toc ol{margin:0; padding-left:22px; columns:2; column-gap:30px; font-size:14px;}
+  .toc li{margin:4px 0; break-inside:avoid;}
+  .toc a{color:var(--body); text-decoration:none;}
+  .toc a:hover{color:var(--rose);}
+
+  h2.sec{font-family:'Fraunces',serif; font-size:23px; font-weight:600; color:var(--ink); margin:44px 0 6px; letter-spacing:-.01em; scroll-margin-top:76px;}
+  h3.lbl{font-family:'Inter',sans-serif; font-size:12px; font-weight:600; letter-spacing:.13em; text-transform:uppercase; color:var(--terra); margin:20px 0 2px;}
+  h3.sub{font-family:'Fraunces',serif; font-size:18px; font-weight:600; color:var(--ink); margin:24px 0 4px;}
+
+  .cite{color:var(--terra); text-decoration:none; white-space:nowrap; font-size:.93em;}
+  .cite:hover{text-decoration:underline;}
+
+  .tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:20px 0; background:var(--paper);}
+  table{width:100%; border-collapse:collapse; font-size:14.5px; min-width:600px;}
+  th{background:var(--plum); color:#fff; text-align:left; font-family:'Inter',sans-serif; font-weight:600; font-size:12px; letter-spacing:.08em; text-transform:uppercase; padding:12px 16px;}
+  td{padding:11px 16px; border-top:1px solid var(--line); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--cotton);}
+  td:first-child{color:var(--ink); font-weight:600;}
+
+  ul.plain{margin:10px 0; padding-left:22px;}
+  ul.plain li{margin:6px 0;}
+  .promptlist{margin:12px 0; padding:0; list-style:none;}
+  .promptlist li{font-family:'Fraunces',serif; font-style:italic; color:var(--plum); padding:5px 0 5px 18px; border-left:3px solid var(--rosewater); margin:6px 0;}
+
+  ol.refs{margin:16px 0 0; padding-left:0; list-style:none; counter-reset:ref;}
+  ol.refs li{position:relative; margin:0 0 18px; padding:16px 20px 16px 56px; background:var(--paper); border:1px solid var(--line); border-radius:14px; scroll-margin-top:76px;}
+  ol.refs li::before{counter-increment:ref; content:"[" counter(ref) "]"; position:absolute; left:18px; top:16px; font-family:'Fraunces',serif; font-weight:600; color:var(--rose);}
+  .refuse{display:block; font-size:13.5px; color:var(--muted); margin-top:4px;}
+  .reflink{display:block; font-size:13.5px; margin-top:4px; word-break:break-all;}
+  .refnote{display:block; font-size:13px; color:var(--muted); margin-top:4px; font-style:italic;}
+
+  hr{border:none; border-top:1px solid var(--line); margin:38px 0;}
+  footer{color:var(--muted); font-size:13px;}
+  @media(max-width:640px){.toc ol{columns:1;} h1{font-size:30px;}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 210 150" aria-hidden="true">
+        <path d="M30 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#E3C9C8" stroke-width="30" stroke-linecap="round"/>
+        <path d="M112 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#C17A82" stroke-width="30" stroke-linecap="round"/>
+        <path d="M105 62 V26" fill="none" stroke="#D8AEB1" stroke-width="7" stroke-linecap="round"/>
+        <path d="M104 40 C86 40 74 30 72 14 C90 12 104 22 104 40 Z" fill="#E3C9C8"/>
+        <path d="M106 36 C124 36 136 24 138 10 C120 9 106 20 106 36 Z" fill="#D8AEB1"/>
+      </svg>
+      <b>WellMate</b>
+    </a>
+    <a class="back" href="./">← wellmate.app</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h1>Research &amp; Evidence</h1>
+<p class="subtitle">Mental Wellmate App — MVP Research</p>
+<p class="eff">An empirical validation and literature mapping framework &nbsp;&middot;&nbsp; Published: July 2026</p>
+
+<p class="intro">This document provides an empirical validation and literature mapping framework for the Mental Wellmate App. The purpose is to connect each visible app feature with established psychological constructs, research literature, and evidence-based mental health principles.</p>
+
+<p>The app includes mood check-ins, body feeling check-ins, breathing exercises, body scan, hydration check, mindful movement, journaling, mindful games, reminders, personal journeys, progress tracking, language selection, login/profile, and contact/support features.</p>
+
+<div class="callout">
+  <p style="margin:0;">The app should be understood as a <strong>digital self-care and psychosocial support tool</strong>, not as a medical diagnostic tool or replacement for professional therapy. Mental health apps can support self-monitoring, coping skills, and wellbeing, but their effectiveness, privacy, cultural appropriateness, and safety must be evaluated carefully <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>, <a class="cite" href="#ref12">[12, Rickard et al., 2022]</a>, <a class="cite" href="#ref13">[13, Iwaya et al., 2022]</a>.</p>
+</div>
+
+<p>According to the World Health Organization, mental health is a state of wellbeing that helps people cope with life stress, realize their abilities, learn and work well, and contribute to their community <a class="cite" href="#ref15">[15, World Health Organization, 2025]</a>. This makes the Mental Wellmate App relevant for women's mental health because many women experience stress, social pressure, family responsibilities, isolation, uncertainty, and limited access to professional mental health care.</p>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1">Theoretical Foundation</a></li>
+    <li><a href="#s2">Mood Check-In</a></li>
+    <li><a href="#s3">Mood Calibration</a></li>
+    <li><a href="#s4">Body Feeling Check-In</a></li>
+    <li><a href="#s5">Interactive Body Scan</a></li>
+    <li><a href="#s6">Slow Breathing</a></li>
+    <li><a href="#s7">Hydration Check</a></li>
+    <li><a href="#s8">Mindful Movement</a></li>
+    <li><a href="#s9">Morning Intention</a></li>
+    <li><a href="#s10">Evening Reflection / Journaling</a></li>
+    <li><a href="#s11">Three Wins Today</a></li>
+    <li><a href="#s12">One Challenge, One Lesson</a></li>
+    <li><a href="#s13">Mindful Games</a></li>
+    <li><a href="#s14">Visualizing Game</a></li>
+    <li><a href="#s15">Positive Bubbles Game</a></li>
+    <li><a href="#s16">Emotions Sorting Game</a></li>
+    <li><a href="#s17">Sleep Reminder</a></li>
+    <li><a href="#s18">Healthy Food Reminder</a></li>
+    <li><a href="#s19">Posture Reminder</a></li>
+    <li><a href="#s20">Personal Journey</a></li>
+    <li><a href="#s21">Progress &amp; Activity Tracking</a></li>
+    <li><a href="#s22">Language Selection</a></li>
+    <li><a href="#s23">Login &amp; Personal Profile</a></li>
+    <li><a href="#s24">Contact &amp; Support</a></li>
+    <li><a href="#s25">Benefits for Women</a></li>
+    <li><a href="#s26">Expected Mental Health Effects</a></li>
+    <li><a href="#refs">References</a></li>
+  </ol>
+</nav>
+
+<h2 class="sec" id="s1">1. Theoretical Foundation of the Mental Wellmate App</h2>
+<p>The Mental Wellmate App can be mapped to a digital mental health self-care model. Its features support emotional awareness, body awareness, stress regulation, self-care habits, reflective writing, physical activity, emotional literacy, and motivation.</p>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>App Feature</th><th>Validated Psychological Construct</th><th>Academic Literature Mapping</th></tr></thead>
+  <tbody>
+    <tr><td>Mood Check-In</td><td>Affect labeling and emotional awareness</td><td>Naming emotions supports implicit emotion regulation <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>.</td></tr>
+    <tr><td>Mood Calibration</td><td>Emotional differentiation and emotion regulation</td><td>Detailed emotion labeling helps users understand emotional states more clearly <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>.</td></tr>
+    <tr><td>Body Feeling Check-In</td><td>Somatic awareness and stress recognition</td><td>Stress can appear physically through fatigue, headaches, tension, and bodily discomfort <a class="cite" href="#ref3">[3, Kerekes et al., 2021]</a>.</td></tr>
+    <tr><td>Interactive Body Scan</td><td>Mindfulness and body awareness</td><td>Body scan meditation is linked with mindfulness and body awareness <a class="cite" href="#ref4">[4, Fincham et al., 2022]</a>.</td></tr>
+    <tr><td>Slow Breathing</td><td>Physiological self-regulation</td><td>Diaphragmatic breathing improves attention, affect, and cortisol-related stress response <a class="cite" href="#ref2">[2, Ma et al., 2017]</a>, <a class="cite" href="#ref5">[5, Fincham et al., 2023]</a>.</td></tr>
+    <tr><td>Hydration Check</td><td>Physical self-care and cognitive support</td><td>Hydration status can influence cognition and mood <a class="cite" href="#ref6">[6, Masento et al., 2014]</a>.</td></tr>
+    <tr><td>Mindful Movement</td><td>Physical activity and behavioral activation</td><td>Physical activity reduces symptoms of depression and anxiety and improves wellbeing <a class="cite" href="#ref7">[7, World Health Organization, 2024]</a>.</td></tr>
+    <tr><td>Journaling</td><td>Expressive writing and emotional processing</td><td>Expressive writing helps people process difficult experiences <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>.</td></tr>
+    <tr><td>Mindful Games</td><td>Emotional literacy and attention training</td><td>Interactive app features may improve engagement in digital mental health tools <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>.</td></tr>
+    <tr><td>Reminders</td><td>Habit formation and routine support</td><td>Repeated self-care reminders support routine-building and health behavior consistency <a class="cite" href="#ref15">[15, World Health Organization, 2025]</a>.</td></tr>
+    <tr><td>Journeys</td><td>Goal-directed coping and self-efficacy</td><td>Structured pathways support engagement, motivation, and progress tracking <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>, <a class="cite" href="#ref12">[12, Rickard et al., 2022]</a>.</td></tr>
+    <tr><td>Login/Profile</td><td>Personalization and digital privacy</td><td>Mental health apps require strong data protection because they collect sensitive data <a class="cite" href="#ref13">[13, Iwaya et al., 2022]</a>.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 class="sec" id="s2">2. Mood Check-In Feature</h2>
+<p>The app asks users: <em>"How are you feeling today?"</em> and provides mood or emoji-based options.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to affect labeling, emotional awareness, emotional self-monitoring, and emotion regulation.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose of the mood check-in is to help users identify their emotional state. Many people feel emotionally heavy but cannot clearly say whether they are sad, anxious, angry, tired, lonely, or hopeless.</p>
+<h3 class="lbl">Benefits</h3>
+<p>This activity helps users develop emotional awareness. It can help women notice patterns in their mood, such as feeling anxious before exams, sad after isolation, stressed after family conflict, or tired after poor sleep.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Mood check-ins may improve emotional awareness, early recognition of distress, and help-seeking behavior. Naming emotions is important because affect labeling has been shown to reduce emotional intensity and support implicit emotion regulation <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Torre and Lieberman explain that putting feelings into words can reduce emotional intensity and can work as an emotion regulation strategy <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>. Therefore, the mood check-in feature is theoretically supported as a low-intensity emotional regulation tool.</p>
+
+<h2 class="sec" id="s3">3. Mood Calibration Feature</h2>
+<p>The app asks deeper questions such as how pleasant the mood feels, how calm or energized the user feels, what the feeling may be, and what is contributing to the mood.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to emotional differentiation, emotional literacy, affect labeling, and cognitive-emotional awareness.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to move users from a general feeling to a more specific emotional understanding. For example, instead of saying "I feel bad," the user may realize, "I feel anxious because I am worried about my future."</p>
+<h3 class="lbl">Benefits</h3>
+<p>Mood calibration helps users understand emotional triggers. It can improve emotional vocabulary and make it easier for women to explain their feelings to a counselor, teacher, doctor, family member, or mental health practitioner.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may reduce emotional confusion, increase self-understanding, and improve emotional communication. It may also help women identify whether their mood is connected to family pressure, social isolation, study stress, sleep problems, or future uncertainty.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Affect labeling research supports the idea that naming emotions contributes to emotional regulation <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>. Therefore, mood calibration can be viewed as a more detailed form of affect labeling.</p>
+
+<h2 class="sec" id="s4">4. Body Feeling Check-In Feature</h2>
+<p>The app asks users how their body feels, including options such as relaxed, tightness in the chest or shoulders, tiredness, or heaviness.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to somatic awareness, interoception, stress recognition, and mind-body connection.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users understand that mental stress can appear physically in the body.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Many women may not say, "I am stressed," but they may experience headache, shoulder tension, chest tightness, tiredness, stomach discomfort, poor sleep, or body heaviness. This feature helps users recognize physical signals of emotional distress.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>The body feeling check-in may improve early stress recognition, body awareness, and self-care behavior. It may help users choose appropriate coping strategies such as breathing, movement, rest, or journaling.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Kerekes et al. found links between psychological distress and somatic complaints among high school students, including physical symptoms connected to emotional strain <a class="cite" href="#ref3">[3, Kerekes et al., 2021]</a>. Therefore, the body feeling check-in can be mapped to somatic stress awareness.</p>
+
+<h2 class="sec" id="s5">5. Interactive Body Scan Feature</h2>
+<p>The app shows a body image and allows users to identify areas where they feel tension, stress, or discomfort.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to body scan meditation, mindfulness, interoceptive awareness, and somatic stress mapping.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users locate stress in the body and understand the relationship between physical sensations and emotional experiences.</p>
+<h3 class="lbl">Benefits</h3>
+<p>The body scan helps users notice where they hold tension, such as the head, chest, shoulders, stomach, back, or legs. This is useful for women who experience emotional stress as physical pain or heaviness.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may improve body awareness, reduce emotional confusion, and support early stress management. It may also encourage users to practice calming activities when they notice physical stress signs.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Fincham et al. reviewed body scan meditation and found that body scan practice is associated with mindfulness and body awareness, while also noting that the evidence should be interpreted carefully because body scan alone may not be enough for all mental health outcomes <a class="cite" href="#ref4">[4, Fincham et al., 2022]</a>.</p>
+
+<h2 class="sec" id="s6">6. Slow Breathing Activity</h2>
+<p>The app includes guided breathing with instructions such as inhale, hold, and relax.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to diaphragmatic breathing, relaxation response, physiological self-regulation, and stress reduction.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users calm their body and mind during stress, anxiety, anger, fear, panic, or emotional overwhelm.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Slow breathing is simple, private, free, and easy to practice at home. It can be used before sleep, before exams, after family conflict, or during moments of fear and pressure.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This activity may reduce immediate stress, slow racing thoughts, improve calmness, and support emotional control. It may also help users regain focus during difficult moments.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Ma et al. found that diaphragmatic breathing improved sustained attention, reduced negative affect, and affected cortisol levels, which are connected to stress response <a class="cite" href="#ref2">[2, Ma et al., 2017]</a>. A later meta-analysis also found that breathwork may reduce self-reported stress, anxiety, and depression symptoms, although more high-quality research is still needed <a class="cite" href="#ref5">[5, Fincham et al., 2023]</a>.</p>
+
+<h2 class="sec" id="s7">7. Hydration Check Activity</h2>
+<p>The app includes a hydration check where users can record drinking water.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to basic physical self-care, self-monitoring, and health behavior tracking.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to remind users that mental health is connected with physical care and basic body needs.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Hydration check-ins encourage women to pay attention to their own body needs. Women often care for family members, children, students, or household responsibilities before caring for themselves.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Hydration tracking may support energy, attention, mood stability, and self-care habits. It also teaches that caring for the body is part of caring for the mind.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Masento et al. reviewed evidence showing that hydration status and water consumption can influence some cognitive abilities and mood states <a class="cite" href="#ref6">[6, Masento et al., 2014]</a>. Therefore, hydration check-ins can be justified as a supportive self-care feature, not as a direct mental health treatment.</p>
+
+<h2 class="sec" id="s8">8. Mindful Movement Activity</h2>
+<p>The app includes mindful movement with tracking such as time, distance, calories, or duration.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to physical activity, behavioral activation, stress reduction, and mood improvement.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to encourage gentle movement as part of mental health self-care.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Movement can improve energy, reduce body tension, support sleep, and improve mood. For women who cannot easily go outside because of safety, cultural, family, or social restrictions, indoor movement can be helpful.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Mindful movement may reduce stress, sadness, body heaviness, and anxiety. It may also improve motivation, body confidence, sleep quality, and daily routine.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>The World Health Organization states that physical activity provides significant mental health benefits, reduces symptoms of depression and anxiety, enhances brain health, and improves overall wellbeing <a class="cite" href="#ref7">[7, World Health Organization, 2024]</a>.</p>
+
+<h2 class="sec" id="s9">9. Morning Intention Activity</h2>
+<p>The app includes morning prompts such as:</p>
+<ul class="promptlist">
+  <li>"Today I will focus on…"</li>
+  <li>"I will be mindful of…"</li>
+  <li>"I will care for myself by…"</li>
+</ul>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to goal setting, self-efficacy, intentional behavior, and daily planning.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users begin the day with direction, self-care awareness, and a small achievable goal.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Morning intentions can help women feel more organized and purposeful. This is important for women facing uncertainty, isolation, or limited control over their environment.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This activity may increase motivation, hope, self-efficacy, and emotional stability. It may reduce helplessness by helping users focus on small actions they can control.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>WHO explains that mental health is shaped by individual, social, economic, and environmental factors <a class="cite" href="#ref15">[15, World Health Organization, 2025]</a>. Small daily routines and supportive behaviors can contribute to mental health promotion. Therefore, morning intention-setting can be mapped to preventive mental health promotion and self-efficacy support.</p>
+
+<h2 class="sec" id="s10">10. Evening Reflection / Journaling Feature</h2>
+<p>The app includes evening reflection activities such as Three Wins Today and One Challenge, One Lesson.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to expressive writing, emotional processing, reflection, meaning-making, and self-awareness.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users reflect on the day, express emotions, identify positive moments, and learn from challenges.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Journaling provides a private emotional space. This is especially useful for women who may not feel safe or comfortable sharing their feelings openly.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Journaling may reduce overthinking, improve emotional expression, support self-understanding, and help users process daily stress more calmly.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Pennebaker and Beall introduced expressive writing as a method for confronting emotional experiences <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>. The American Psychological Association also describes expressive writing as a tool that can help people work through life challenges and support mental health <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>.</p>
+
+<h2 class="sec" id="s11">11. Three Wins Today Activity</h2>
+<p>The app asks users to write or think about three positive things they achieved during the day.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to positive reflection, gratitude, self-recognition, self-efficacy, and strength-based coping.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users notice small successes and daily progress.</p>
+<h3 class="lbl">Benefits</h3>
+<p>This activity helps women recognize that even small achievements are meaningful. It can reduce feelings of uselessness, hopelessness, or failure.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Three Wins Today may increase self-confidence, gratitude, motivation, positive thinking, and hope.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>This feature is connected to expressive writing and positive reflection. Expressive writing literature supports structured writing as a way to process experience and improve psychological wellbeing <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>.</p>
+
+<h2 class="sec" id="s12">12. One Challenge, One Lesson Activity</h2>
+<p>The app asks users to identify one challenge they faced and one lesson learned from it.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to cognitive reframing, resilience, problem-solving, reflective coping, and meaning-making.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users understand difficult experiences in a constructive way.</p>
+<h3 class="lbl">Benefits</h3>
+<p>This activity teaches users that challenges can become sources of learning. It encourages emotional maturity and problem-solving instead of helplessness.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may increase resilience, hope, coping ability, and emotional strength.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>This activity can be mapped to cognitive reframing and resilience-building because it encourages the user to reinterpret difficulty as a source of learning. Reflective writing and meaning-making are supported in expressive writing literature, where writing is used to process emotional experiences and create understanding <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>.</p>
+
+<h2 class="sec" id="s13">13. Mindful Games Feature</h2>
+<p>The app includes mindful games such as Visualizing, Positive Bubbles, and Emotions Sorting.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to attention training, emotional literacy, cognitive reframing, positive attention, and digital engagement.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to make mental health activities more interactive, enjoyable, and engaging.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Mindful games may help users practice emotional skills without feeling that they are doing a difficult mental health exercise. Games can reduce boredom and increase app engagement.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Mindful games may improve focus, positive thinking, emotional recognition, relaxation, and continued app use.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Systematic reviews of smartphone mental health apps show that digital tools may be accessible and acceptable, but user engagement and long-term use are major challenges <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>. Interactive features such as games may help improve engagement.</p>
+
+<h2 class="sec" id="s14">14. Visualizing Game</h2>
+<p>The app shows a word, such as "house," and asks the user to visualize it in the mind.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to focused attention, mental imagery, attention regulation, and mindfulness-based focus.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users focus on one mental image instead of overthinking.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Visualization may help users redirect attention from negative thoughts to a neutral or calming mental image. It can be useful for students and women who struggle with concentration because of stress or anxiety.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may reduce overthinking, improve concentration, and create calmness.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Focused attention and mental imagery are commonly studied within mindfulness and meditation research. Such practices are connected with attention regulation and mental training <a class="cite" href="#ref14">[14, Fox et al., 2016]</a>.</p>
+
+<h2 class="sec" id="s15">15. Positive Bubbles Game</h2>
+<p>The user taps positive words and avoids negative words.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to positive attention training, cognitive reframing, emotional awareness, and positive word recognition.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to train users to notice positive words and ideas.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Women experiencing negative self-talk or hopelessness may benefit from repeatedly noticing positive words such as hope, strength, calmness, courage, and peace.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This activity may support positive thinking, emotional hopefulness, attention control, and reduction of negative focus.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>This feature is connected to affect labeling and language-based emotional processing. Torre and Lieberman show that putting emotions and emotional words into language can influence emotional experience and regulation <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>.</p>
+
+<h2 class="sec" id="s16">16. Emotions Sorting Game</h2>
+<p>The app includes a game where users identify or sort emotions.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to emotional literacy, emotion recognition, affect labeling, and emotional regulation.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users recognize and classify emotions.</p>
+<h3 class="lbl">Benefits</h3>
+<p>When users can name emotions, they can communicate feelings more clearly and choose healthier coping strategies.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Emotion sorting may improve emotional vocabulary, communication, self-awareness, and readiness to ask for help.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Affect labeling research supports the idea that naming emotions helps regulate emotional experience <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>. Therefore, emotion sorting can be justified as an emotional literacy activity.</p>
+
+<h2 class="sec" id="s17">17. Sleep Reminder</h2>
+<p>The app includes a sleep reminder.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to sleep hygiene, routine building, emotional regulation, and self-care behavior.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to encourage users to maintain a healthier sleep routine.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Good sleep supports memory, concentration, emotional balance, patience, and energy.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Sleep reminders may help reduce emotional tiredness, irritability, poor focus, and stress. They may also support a more stable daily routine.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>The CDC states that good sleep is essential for health and emotional wellbeing <a class="cite" href="#ref8">[8, Centers for Disease Control and Prevention, 2024]</a>. Therefore, sleep reminders are relevant to mental health promotion and emotional stability.</p>
+
+<h2 class="sec" id="s18">18. Healthy Food Reminder</h2>
+<p>The app includes a reminder for healthy food or regular eating.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to physical self-care, routine support, health behavior prompting, and wellbeing maintenance.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to encourage users to eat regularly and care for their physical health.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Eating regularly can support energy, focus, and physical strength. For women under stress, reminders may help prevent neglecting personal body needs.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Healthy food reminders may support energy, reduce weakness, improve concentration, and reduce irritability. This is not a direct treatment, but it supports overall self-care.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>WHO explains that mental health is influenced by biological, social, and environmental factors <a class="cite" href="#ref15">[15, World Health Organization, 2025]</a>. Basic physical self-care is part of creating conditions that support mental wellbeing.</p>
+
+<h2 class="sec" id="s19">19. Posture Reminder</h2>
+<p>The app includes a posture reminder.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to somatic awareness, physical self-regulation, body tension awareness, and stress-related posture monitoring.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users notice body position and reduce unnecessary physical tension.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Good posture awareness may reduce neck, back, and shoulder discomfort. It can also remind users to pause and check their body during long phone use, study, or work.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Posture reminders may reduce body discomfort, improve body awareness, and support relaxation. Physical discomfort can increase stress and irritability.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Posture reminders can be mapped to somatic awareness because stress and emotional distress may appear through body tension, fatigue, and physical discomfort <a class="cite" href="#ref3">[3, Kerekes et al., 2021]</a>. Therefore, posture reminders may help users notice how stress affects the body.</p>
+
+<h2 class="sec" id="s20">20. Personal Journey Feature</h2>
+<p>The app includes a journey section that organizes activities into a structured path.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to goal-directed coping, self-efficacy, structured behavior change, motivation, and resilience.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to guide users step by step instead of giving random activities.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Journeys create structure, direction, and a feeling of progress. For women facing uncertainty or restrictions, this can support hope and motivation.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Personal journeys may improve consistency, motivation, hope, self-efficacy, and long-term engagement.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Digital mental health app research emphasizes the importance of feasibility, acceptability, and continued engagement <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>. Structured journeys may support engagement by giving users a clear path and measurable progress.</p>
+
+<h2 class="sec" id="s21">21. Progress and Activity Tracking</h2>
+<p>The app tracks mood, activity completion, hydration, movement, and journey progress.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to self-monitoring, behavioral reinforcement, progress awareness, motivation maintenance, and self-efficacy.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to help users see their efforts over time.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Progress tracking can help women recognize that small daily actions matter. It may encourage continued use of self-care activities.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may increase motivation, confidence, hope, self-care consistency, and personal responsibility.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Mental health app reviews identify self-monitoring as one common function of digital mental health tools. Tracking features can support awareness and behavior change when designed safely and ethically <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>, <a class="cite" href="#ref12">[12, Rickard et al., 2022]</a>.</p>
+
+<h2 class="sec" id="s22">22. Language Selection Feature</h2>
+<p>The app includes language options such as English, Dari, and Pashto.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to cultural accessibility, linguistic inclusion, health communication equity, and user engagement.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to make mental health guidance understandable for local users.</p>
+<h3 class="lbl">Benefits</h3>
+<p>Dari and Pashto language options can make the app more accessible for Afghan women and girls who may not be comfortable using English.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>Language access may increase comfort, trust, understanding, and continued use of the app.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>UN Women reports that Afghan women and girls face major restrictions in education, employment, mobility, and public participation <a class="cite" href="#ref16">[16, UN Women, 2025]</a>. UNICEF also reports that restrictions on girls' education and women's employment may reduce future access to female teachers and health workers in Afghanistan <a class="cite" href="#ref17">[17, UNICEF, 2026]</a>. In such a context, local language mental health tools may reduce access barriers and support private learning.</p>
+
+<h2 class="sec" id="s23">23. Login and Personal Profile Feature</h2>
+<p>The app includes login and personal profile features.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to personalization, self-monitoring continuity, digital privacy, and data protection.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to create a personal space where users can save mood records, activities, reminders, journal entries, and progress.</p>
+<h3 class="lbl">Benefits</h3>
+<p>A profile can help users continue their self-care journey and return to previous records.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>If privacy is strong, personal profiles may increase trust, continuity, and engagement. If privacy is weak, it may create fear and reduce app use, especially for women in unsafe or restrictive environments.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Iwaya et al. found that mental health apps create serious privacy concerns because they may collect sensitive personal data <a class="cite" href="#ref13">[13, Iwaya et al., 2022]</a>. Therefore, login and profile features must include strong confidentiality, secure storage, and clear privacy information. See our <a href="privacy.html">Privacy Policy</a> for how WellMate protects your information.</p>
+
+<h2 class="sec" id="s24">24. Contact or Support Feature</h2>
+<p>The app includes a contact or support section.</p>
+<h3 class="lbl">Validated Psychological Construct</h3>
+<p>This feature maps to help-seeking behavior, risk mitigation, user safety, and digital support.</p>
+<h3 class="lbl">Purpose</h3>
+<p>The purpose is to allow users to ask questions, report problems, or seek support.</p>
+<h3 class="lbl">Benefits</h3>
+<p>A support feature can increase trust and help users feel that assistance is available.</p>
+<h3 class="lbl">Expected Mental Health Effects</h3>
+<p>This feature may support help-seeking and reduce fear. The app clearly states whether the contact feature is for technical support, emotional support, or emergency help.</p>
+<h3 class="lbl">Literature Mapping</h3>
+<p>Rickard et al. emphasize the importance of quality, safety, and integrity in mental health apps <a class="cite" href="#ref12">[12, Rickard et al., 2022]</a>. Support features should be designed carefully because users may depend on them during emotional distress.</p>
+
+<h2 class="sec" id="s25">25. Benefits of the Mental Wellmate App for Women</h2>
+<h3 class="sub">Emotional Benefits</h3>
+<p>The app may help women identify emotions, express feelings, reduce emotional confusion, and understand mood patterns. Mood check-ins, mood calibration, journaling, and emotion games are supported by affect labeling and expressive writing literature <a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a>, <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>.</p>
+<h3 class="sub">Stress Management Benefits</h3>
+<p>Breathing, body scan, body feeling check-ins, journaling, and movement may support stress management. Breathing research shows improvements in attention, affect, and cortisol response <a class="cite" href="#ref2">[2, Ma et al., 2017]</a>, while body scan literature supports body awareness and mindfulness <a class="cite" href="#ref4">[4, Fincham et al., 2022]</a>.</p>
+<h3 class="sub">Anxiety Management Benefits</h3>
+<p>Slow breathing, visualization, mood calibration, and journaling may help users manage worry, fear, and overthinking. Breathwork has been associated with reductions in stress and mental health symptoms in meta-analytic research <a class="cite" href="#ref5">[5, Fincham et al., 2023]</a>.</p>
+<h3 class="sub">Self-Care Benefits</h3>
+<p>Hydration, sleep, food, posture, and movement reminders encourage women to care for their bodies and minds. Hydration can influence cognition and mood <a class="cite" href="#ref6">[6, Masento et al., 2014]</a>, physical activity reduces symptoms of depression and anxiety <a class="cite" href="#ref7">[7, World Health Organization, 2024]</a>, and good sleep is essential for emotional wellbeing <a class="cite" href="#ref8">[8, Centers for Disease Control and Prevention, 2024]</a>.</p>
+<h3 class="sub">Confidence and Hope Benefits</h3>
+<p>Activities such as Three Wins Today, One Challenge, One Lesson, journeys, and progress tracking may support confidence, motivation, and resilience. These features are related to self-efficacy, positive reflection, reflective coping, and goal-directed engagement <a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a>, <a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>.</p>
+<h3 class="sub">Educational Benefits</h3>
+<p>The app teaches users about emotions, body awareness, coping skills, breathing, journaling, self-care, and healthy habits. This supports mental health literacy and self-management <a class="cite" href="#ref15">[15, World Health Organization, 2025]</a>.</p>
+<h3 class="sub">Benefits for Afghan Women</h3>
+<p>Because the app includes Dari and Pashto, it may be more suitable for Afghan women and girls. This is important because Afghan women and girls face restrictions affecting education, work, mobility, and public life <a class="cite" href="#ref16">[16, UN Women, 2025]</a>, <a class="cite" href="#ref17">[17, UNICEF, 2026]</a>.</p>
+
+<h2 class="sec" id="s26">26. Expected Mental Health Effects of the App</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Feature Category</th><th>Expected Effect</th><th>Literature Support</th></tr></thead>
+  <tbody>
+    <tr><td>Mood check-in</td><td>Improved emotional awareness</td><td><a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a></td></tr>
+    <tr><td>Mood calibration</td><td>Better emotional vocabulary</td><td><a class="cite" href="#ref1">[1, Torre &amp; Lieberman, 2018]</a></td></tr>
+    <tr><td>Body feeling check-in</td><td>Better recognition of physical stress signs</td><td><a class="cite" href="#ref3">[3, Kerekes et al., 2021]</a></td></tr>
+    <tr><td>Body scan</td><td>Improved body awareness and mindfulness</td><td><a class="cite" href="#ref4">[4, Fincham et al., 2022]</a></td></tr>
+    <tr><td>Slow breathing</td><td>Reduced stress and improved calmness</td><td><a class="cite" href="#ref2">[2, Ma et al., 2017]</a>, <a class="cite" href="#ref5">[5, Fincham et al., 2023]</a></td></tr>
+    <tr><td>Hydration check</td><td>Better physical self-care and mood support</td><td><a class="cite" href="#ref6">[6, Masento et al., 2014]</a></td></tr>
+    <tr><td>Mindful movement</td><td>Reduced anxiety/depression symptoms</td><td><a class="cite" href="#ref7">[7, World Health Organization, 2024]</a></td></tr>
+    <tr><td>Journaling</td><td>Improved emotional expression</td><td><a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a></td></tr>
+    <tr><td>Three Wins Today</td><td>Improved confidence and positive reflection</td><td><a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a></td></tr>
+    <tr><td>One Challenge, One Lesson</td><td>Improved resilience and reframing</td><td><a class="cite" href="#ref9">[9, Pennebaker &amp; Beall, 1986]</a>, <a class="cite" href="#ref10">[10, American Psychological Association, 2024]</a></td></tr>
+    <tr><td>Mindful games</td><td>Better engagement and emotional literacy</td><td><a class="cite" href="#ref11">[11, BMJ Open, 2025]</a></td></tr>
+    <tr><td>Sleep reminder</td><td>Better sleep routine and emotional wellbeing</td><td><a class="cite" href="#ref8">[8, Centers for Disease Control and Prevention, 2024]</a></td></tr>
+    <tr><td>Food reminder</td><td>Improved self-care routine</td><td><a class="cite" href="#ref15">[15, World Health Organization, 2025]</a></td></tr>
+    <tr><td>Posture reminder</td><td>Reduced physical tension awareness</td><td><a class="cite" href="#ref3">[3, Kerekes et al., 2021]</a></td></tr>
+    <tr><td>Journeys</td><td>Improved motivation and self-efficacy</td><td><a class="cite" href="#ref11">[11, BMJ Open, 2025]</a></td></tr>
+    <tr><td>Progress tracking</td><td>Improved consistency and self-monitoring</td><td><a class="cite" href="#ref11">[11, BMJ Open, 2025]</a>, <a class="cite" href="#ref12">[12, Rickard et al., 2022]</a></td></tr>
+    <tr><td>Login/profile</td><td>Personalized use with privacy needs</td><td><a class="cite" href="#ref13">[13, Iwaya et al., 2022]</a></td></tr>
+    <tr><td>Language selection</td><td>Cultural accessibility</td><td><a class="cite" href="#ref16">[16, UN Women, 2025]</a>, <a class="cite" href="#ref17">[17, UNICEF, 2026]</a></td></tr>
+    <tr><td>Contact/support</td><td>Help-seeking and safety support</td><td><a class="cite" href="#ref12">[12, Rickard et al., 2022]</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 class="sec" id="refs">References</h2>
+<ol class="refs">
+  <li id="ref1">Torre, J. B., &amp; Lieberman, M. D. (2018). Putting feelings into words: Affect labeling as implicit emotion regulation. <em>Emotion Review, 10</em>(2), 116–124.
+    <span class="refuse">Use for: Mood check-in, mood calibration, emotion sorting, emotional awareness.</span>
+    <a class="reflink" href="https://journals.sagepub.com/doi/pdf/10.1177/1754073917742706" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref2">Ma, X., Yue, Z., Gong, Z., Zhang, H., Duan, N., Shi, Y., Wei, G., &amp; Li, Y. (2017). The effect of diaphragmatic breathing on attention, negative affect and stress in healthy adults. <em>Frontiers in Psychology, 8</em>, 874.
+    <span class="refuse">Use for: Slow breathing activity, stress reduction, attention, physiological regulation.</span>
+    <a class="reflink" href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00874/pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref3">Kerekes, N., Zouini, B., Tingberg, S., &amp; Erlandsson, S. (2021). Psychological distress, somatic complaints and their relation to negative psychosocial factors in a sample of Swedish high school students. <em>Frontiers in Public Health, 9</em>, 669958.
+    <span class="refuse">Use for: Body feeling check-in, somatic signs of stress, headaches, stomach pain, fatigue, student distress.</span>
+    <a class="reflink" href="https://www.diva-portal.org/smash/get/diva2:1610128/FULLTEXT01.pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref4">Fincham, G. W., Strauss, C., Montero-Marin, J., &amp; Cavanagh, K. (2022). The effects of body scan meditation: A systematic review and meta-analysis. <em>Applied Psychology: Health and Well-Being, 14</em>(3), 1062–1080.
+    <span class="refuse">Use for: Interactive body scan, mindfulness, body awareness.</span>
+    <a class="reflink" href="https://pubmed.ncbi.nlm.nih.gov/35538557/" target="_blank" rel="noopener">Official source (PubMed) ↗</a>
+    <span class="refnote">An official open-access PDF was not clearly available from the publisher, so the PubMed record is provided as the academic source.</span></li>
+  <li id="ref5">Fincham, G. W., Strauss, C., Montero-Marin, J., &amp; Cavanagh, K. (2023). Effect of breathwork on stress and mental health: A meta-analysis of randomised-controlled trials. <em>Scientific Reports, 13</em>, 432.
+    <span class="refuse">Use for: Breathing activity, stress, anxiety, depression symptoms.</span>
+    <a class="reflink" href="https://www.nature.com/articles/s41598-022-27247-y.pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref6">Masento, N. A., Golightly, M., Field, D. T., Butler, L. T., &amp; van Reekum, C. M. (2014). Effects of hydration status on cognitive performance and mood. <em>British Journal of Nutrition, 111</em>(10), 1841–1852.
+    <span class="refuse">Use for: Hydration check, cognition, mood, energy, concentration.</span>
+    <a class="reflink" href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/1210B6BE585E03C71A299C52B51B22F7/S0007114513004455a.pdf/effects-of-hydration-status-on-cognitive-performance-and-mood.pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref7">World Health Organization. (2024). Physical activity fact sheet.
+    <span class="refuse">Use for: Mindful movement, depression symptoms, anxiety symptoms, brain health, wellbeing.</span>
+    <a class="reflink" href="https://iris.who.int/bitstreams/a137d0b6-64ec-4e86-a69a-ae38ca7cef59/download" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref8">Centers for Disease Control and Prevention. (2024). About sleep.
+    <span class="refuse">Use for: Sleep reminder, emotional wellbeing, health, sleep routine.</span>
+    <a class="reflink" href="https://www.cdc.gov/sleep/about/index.html" target="_blank" rel="noopener">Official source ↗</a>
+    <a class="reflink" href="https://www.cdc.gov/healthy-aging/media/pdfs/2024/06/Healthy-Sleep-Healthy-Brain-508.pdf" target="_blank" rel="noopener">Supporting CDC PDF ↗</a></li>
+  <li id="ref9">Pennebaker, J. W., &amp; Beall, S. K. (1986). Confronting a traumatic event: Toward an understanding of inhibition and disease. <em>Journal of Abnormal Psychology, 95</em>(3), 274–281.
+    <span class="refuse">Use for: Journaling, expressive writing, emotional processing.</span>
+    <a class="reflink" href="https://doi.org/10.1037/0021-843X.95.3.274" target="_blank" rel="noopener">Official DOI ↗</a>
+    <span class="refnote">An official free PDF is not always available, so the DOI is provided as the academic source.</span></li>
+  <li id="ref10">American Psychological Association. (2024). Expressive writing can help your mental health.
+    <span class="refuse">Use for: Journaling, evening reflection, emotional expression.</span>
+    <a class="reflink" href="https://www.apa.org/news/podcasts/speaking-of-psychology/expressive-writing" target="_blank" rel="noopener">Official source ↗</a>
+    <span class="refnote">This is an official APA web source, not a PDF article.</span></li>
+  <li id="ref11">BMJ Open. (2025). Smartphone apps for mental health: Systematic review of the literature. <em>BMJ Open, 15</em>(2), e093932.
+    <span class="refuse">Use for: Mental health app evaluation, effectiveness, feasibility, acceptability, engagement.</span>
+    <a class="reflink" href="https://bmjopen.bmj.com/content/bmjopen/15/2/e093932.full.pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref12">Rickard, N. S., Kurt, P., &amp; Meade, T. (2022). Systematic assessment of the quality and integrity of popular mental health smartphone apps using the American Psychiatric Association's app evaluation model. <em>Frontiers in Digital Health, 4</em>, 1003181.
+    <span class="refuse">Use for: App quality, safety, integrity, contact/support feature, digital mental health standards.</span>
+    <a class="reflink" href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2022.1003181/pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref13">Iwaya, L. H., Babar, M. A., Rashid, A., &amp; Wijayarathna, C. (2022). On the privacy of mental health apps: An empirical investigation and its implications for app development. <em>Empirical Software Engineering, 28</em>, 2.
+    <span class="refuse">Use for: Login, profile, privacy, data protection, confidentiality, mental health app risks.</span>
+    <a class="reflink" href="https://arxiv.org/pdf/2201.09006" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref14">Fox, K. C. R., Dixon, M. L., Nijeboer, S., Girn, M., Floman, J. L., Lifshitz, M., Ellamil, M., Sedlmeier, P., &amp; Christoff, K. (2016). Functional neuroanatomy of meditation: A review and meta-analysis of 78 functional neuroimaging investigations. <em>Neuroscience &amp; Biobehavioral Reviews, 65</em>, 208–228.
+    <span class="refuse">Use for: Visualization game, focused attention, meditation, mental imagery.</span>
+    <a class="reflink" href="https://arxiv.org/pdf/1603.06342" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref15">World Health Organization. (2025). Mental health: Strengthening our response.
+    <span class="refuse">Use for: Definition of mental health, mental wellbeing, stress coping, social and structural determinants.</span>
+    <a class="reflink" href="https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank" rel="noopener">Official source ↗</a>
+    <span class="refnote">This WHO fact sheet is an official web source; a direct PDF version was not clearly available.</span></li>
+  <li id="ref16">UN Women. (2025). Gender Alert: Four years of Taliban rule: Afghan women resist as restrictions tighten.
+    <span class="refuse">Use for: Afghan women's context, education restrictions, mobility restrictions, employment restrictions, social isolation.</span>
+    <a class="reflink" href="https://www.ecoi.net/en/file/local/2135269/af-20250417744-250825-bls25533-taliban-anniversary-v05-web.pdf" target="_blank" rel="noopener">Direct PDF ↗</a></li>
+  <li id="ref17">UNICEF. (2026). Restrictions on girls' education and women's employment in Afghanistan could lead to a loss of over 25,000 female teachers and health workers by 2030.
+    <span class="refuse">Use for: Afghan girls' education restrictions, women's employment, future female teachers and health workers.</span>
+    <a class="reflink" href="https://www.unicef.org/afghanistan/press-releases/restrictions-girls-education-and-womens-employment-afghanistan-could-lead-loss-over" target="_blank" rel="noopener">Official source ↗</a>
+    <span class="refnote">This is an official UNICEF source; a direct PDF version was not clearly available.</span></li>
+</ol>
+
+<hr>
+<footer>
+  WellMate is a digital self-care and psychosocial support tool — not a medical diagnostic tool or a replacement for professional therapy. WellMate is a product of Learn Afghan Inc. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; © 2026 wellmate.app
+</footer>
+
+</div>
+</body>
+</html>
