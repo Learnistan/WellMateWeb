@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>If you need help now — WellMate</title>
+<meta name="description" content="Immediate steps you can take right now, and how to reach real support — in Pashto, Dari and English." />
+<meta name="theme-color" content="#6E4A55" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://www.wellmate.app/help.html" />
+<link rel="alternate" hreflang="en" href="https://www.wellmate.app/help.html?lang=en" />
+<link rel="alternate" hreflang="fa" href="https://www.wellmate.app/help.html?lang=fa" />
+<link rel="alternate" hreflang="ps" href="https://www.wellmate.app/help.html?lang=ps" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 90'%3E%3Cpath d='M40 20C40 14 44 9 49 7 47 12 47 16 45 19Z' fill='%237D6A4F'/%3E%3Cpath d='M40 19C20 19 14 36 14 52 14 72 27 84 40 84 53 84 66 72 66 52 66 36 60 19 40 19Z' fill='%23C17A82'/%3E%3Cpath d='M40 64C36 58 28 56 28 49 28 45 31 43 34 43 37 43 39 45 40 47 41 45 43 43 46 43 49 43 52 45 52 49 52 56 44 58 40 64Z' fill='%23F5EFE3'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --cotton:#F5EFE3; --paper:#FFFDF9; --ink:#2A211E; --body:#463C37; --muted:#7A6E66;
+    --rose:#C17A82; --terra:#A85A44; --saffron:#C8893A; --plum:#6E4A55; --line:#E3D7C4;
+    --font-head:'Fraunces','Vazirmatn',Georgia,serif;
+    --font-body:'Inter','Vazirmatn',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--cotton); color:var(--body); font-family:var(--font-body);
+    font-size:17px; line-height:1.7; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px; margin:0 auto; padding:0 22px 90px;}
+  h1,h2,h3{font-family:var(--font-head); color:var(--ink); margin:0; line-height:1.18; font-weight:600;}
+  p{margin:0;} a{color:var(--terra);}
+
+  /* --- quick exit: always reachable, high contrast --- */
+  .exitbar{position:sticky; top:0; z-index:60; background:var(--ink); color:#F5EFE3;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:9px clamp(14px,4vw,24px); font-size:13.5px;}
+  .exitbar .hint{opacity:.72;}
+  .exit{display:inline-flex; align-items:center; gap:8px; background:#E8DCCB; color:#2A211E;
+    border:0; border-radius:999px; padding:9px 18px; font:700 14px var(--font-body);
+    cursor:pointer; flex:none; transition:transform .15s ease, background .2s ease;}
+  .exit:hover{background:#fff; transform:translateY(-1px);}
+  .exit:active{transform:scale(.97);}
+
+  header.site{background:var(--paper); border-bottom:1px solid var(--line);
+    padding:13px clamp(14px,4vw,24px);}
+  header.site .inner{max-width:720px; margin:0 auto; display:flex; align-items:center;
+    justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink);}
+  .brand svg{width:32px; height:25px;} .brand b{font-family:var(--font-head); font-size:19px;}
+  .lang{display:flex; gap:2px; background:rgba(42,33,30,.07); border-radius:999px; padding:3px;}
+  .lang button{border:0; background:transparent; color:var(--ink); font:inherit; font-size:13px;
+    padding:5px 12px; border-radius:999px; cursor:pointer; opacity:.7;}
+  .lang button.active{background:var(--ink); color:var(--cotton); opacity:1;}
+
+  h1{font-size:clamp(30px,5.5vw,42px); margin:44px 0 12px; letter-spacing:-.01em;}
+  .lede{font-size:19px; color:var(--body); max-width:56ch;}
+
+  .now{background:var(--plum); color:#F7EDEA; border-radius:20px; padding:26px clamp(20px,4vw,30px); margin:32px 0 0;}
+  .now h2{color:#fff; font-size:22px; margin-bottom:8px;}
+  .now p{color:rgba(255,255,255,.9); font-size:16.5px;}
+  .now ol{margin:16px 0 0; padding:0; list-style:none; display:grid; gap:14px; counter-reset:s;}
+  .now li{counter-increment:s; display:grid; grid-template-columns:30px 1fr; gap:13px; align-items:start;}
+  .now li::before{content:counter(s); font-weight:700; font-size:13px; color:#3A2830;
+    background:#EBC9A0; width:26px; height:26px; border-radius:50%; display:grid; place-items:center;}
+  .now li b{color:#fff; display:block;}
+  .now li span{color:rgba(255,255,255,.86); font-size:15.5px;}
+
+  h2.sec{font-size:clamp(22px,3.4vw,28px); margin:48px 0 10px;}
+  .sub{color:var(--muted); font-size:15.5px; margin-bottom:18px; max-width:58ch;}
+
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:18px;
+    padding:22px clamp(18px,3vw,26px); margin-bottom:14px;}
+  .card h3{font-size:18.5px; margin-bottom:5px;}
+  .card .where{font-size:12.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--terra); margin-bottom:9px;}
+  .card p{font-size:16px; color:var(--body);}
+  .tel{display:inline-block; font-family:var(--font-head); font-weight:600; font-size:26px;
+    color:var(--ink); text-decoration:none; margin:10px 0 4px; letter-spacing:.01em;}
+  .tel:hover{color:var(--terra);}
+  .meta{font-size:14px; color:var(--muted); margin-top:6px;}
+  .card .go{display:inline-block; margin-top:12px; font-weight:600; font-size:15.5px;}
+
+  .honest{border-inline-start:3px solid var(--saffron); background:#FBF4E7;
+    padding:16px 20px; border-radius:0 14px 14px 0; margin:22px 0 0; font-size:15.5px;}
+  .honest b{color:var(--ink);}
+
+  .ground{background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:22px clamp(18px,3vw,26px);}
+  .ground ul{margin:14px 0 0; padding:0; list-style:none; display:grid; gap:10px;}
+  .ground li{display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:baseline; font-size:16px;}
+  .ground li i{font-style:normal; font-family:var(--font-head); font-weight:600; color:var(--rose); font-size:19px;}
+
+  footer{border-top:1px solid var(--line); margin-top:56px; padding-top:24px;
+    font-size:14.5px; color:var(--muted); display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between;}
+  footer a{color:var(--terra);}
+  :focus-visible{outline:3px solid var(--rose); outline-offset:3px; border-radius:8px;}
+  [dir=rtl] .honest{border-radius:14px 0 0 14px;}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important;}}
+</style>
+</head>
+<body>
+
+<div class="exitbar">
+  <span class="hint" data-i18n="exitHint">Press Escape at any time to leave this page.</span>
+  <button class="exit" id="exitBtn" type="button">
+    <span aria-hidden="true">✕</span><span data-i18n="exitBtn">Leave this site</span>
+  </button>
+</div>
+
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 210 150" role="img" aria-label="WellMate">
+        <path d="M30 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#E3C9C8" stroke-width="30" stroke-linecap="round"/>
+        <path d="M112 45 V98 a34 34 0 0 0 68 0 V45" fill="none" stroke="#C17A82" stroke-width="30" stroke-linecap="round"/>
+        <path d="M105 62 V26" fill="none" stroke="#D8AEB1" stroke-width="7" stroke-linecap="round"/>
+        <path d="M104 40 C86 40 74 30 72 14 C90 12 104 22 104 40 Z" fill="#E3C9C8"/>
+        <path d="M106 36 C124 36 136 24 138 10 C120 9 106 20 106 36 Z" fill="#D8AEB1"/>
+      </svg>
+      <b>WellMate</b>
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="fa">دری</button>
+      <button data-lang="ps">پښتو</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <h1 data-i18n="title">If you need help now</h1>
+  <p class="lede" data-i18n="lede">Whatever brought you here, you do not have to hold it alone, and you do not have to explain it well. Start with the first thing on this page.</p>
+
+  <section class="now">
+    <h2 data-i18n="nowT">Right now, before anything else</h2>
+    <p data-i18n="nowS">These need no phone, no signal and no money.</p>
+    <ol>
+      <li><span><b data-i18n="n1t">Put distance between you and anything that could harm you.</b><span data-i18n="n1d">If there is something within reach you could use to hurt yourself, move to another room, or ask someone to hold it for you.</span></span></li>
+      <li><span><b data-i18n="n2t">Slow your breathing out.</b><span data-i18n="n2d">Breathe in while you count to four. Breathe out while you count to six. Do it eight times. A longer breath out is what settles the body.</span></span></li>
+      <li><span><b data-i18n="n3t">Tell one person.</b><span data-i18n="n3d">It does not have to be the right person, or a professional. "I am not okay tonight" is enough of a sentence.</span></span></li>
+      <li><span><b data-i18n="n4t">Decide only about the next hour.</b><span data-i18n="n4d">You do not have to decide anything about your life tonight. Get to morning. That is the whole task.</span></span></li>
+    </ol>
+  </section>
+
+  <h2 class="sec" data-i18n="peopleT">People you can reach</h2>
+  <p class="sub" data-i18n="peopleS">We only list services we can verify. Where we cannot verify something, we say so rather than print a number that might not answer.</p>
+
+  <div class="card">
+    <div class="where" data-i18n="w1">In Afghanistan</div>
+    <h3 data-i18n="c1t">Free telephone counselling, in Dari and Pashto</h3>
+    <p data-i18n="c1d">Action Against Hunger has run a free national telephone counselling service since 2022, staffed by Afghan psychologists. Calls are free and confidential, and many come from provinces where there is no clinic nearby.</p>
+    <p class="meta" data-i18n="c1m">To be connected, ask at any health facility, clinic or community health worker for the Action Against Hunger psychosocial helpline. If you are already speaking to a health worker, they can call on your behalf.</p>
+  </div>
+
+  <div class="card">
+    <div class="where" data-i18n="w2">For Afghans living in the United States</div>
+    <h3 data-i18n="c2t">Afghan Behavioral Health Support</h3>
+    <a class="tel" href="tel:+18006156514" dir="ltr">800‑615‑6514</a>
+    <p class="meta" data-i18n="c2m">Open 24 hours, every day. Counsellors speak Dari, Pashto and English. Free. Funded by the US Office of Refugee Resettlement. This number only works from inside the United States.</p>
+  </div>
+
+  <div class="card">
+    <div class="where" data-i18n="w3">Anywhere in the world</div>
+    <h3 data-i18n="c3t">Find a helpline in your country</h3>
+    <p data-i18n="c3d">If you are outside Afghanistan, these directories keep an up-to-date list of free crisis lines by country, including many that answer in Dari or Pashto.</p>
+    <a class="go" href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com ↗</a><br>
+    <a class="go" href="https://befrienders.org" target="_blank" rel="noopener">befrienders.org ↗</a>
+  </div>
+
+  <div class="card">
+    <div class="where" data-i18n="w4">If someone's life is in danger</div>
+    <h3 data-i18n="c4t">Call your local emergency number</h3>
+    <p data-i18n="c4d">If you or someone near you has been seriously hurt, or is about to be, contact local emergency services or get to the nearest hospital. That comes before anything on this page.</p>
+  </div>
+
+  <p class="honest" data-i18n="honest"><b>What we do not know.</b> There is no single national crisis line in Afghanistan that we can point you to with confidence, and we will not invent one. A number that does not answer, at the moment you need it, is worse than no number at all. If you know of a service that should be listed here, please tell us.</p>
+
+  <h2 class="sec" data-i18n="groundT">If you cannot reach anyone yet</h2>
+  <p class="sub" data-i18n="groundS">This takes about two minutes and works anywhere. Name things out loud, or in your head.</p>
+  <div class="ground">
+    <ul>
+      <li><i>5</i><span data-i18n="g5">things you can see around you</span></li>
+      <li><i>4</i><span data-i18n="g4">things you can touch, and touch them</span></li>
+      <li><i>3</i><span data-i18n="g3">sounds you can hear</span></li>
+      <li><i>2</i><span data-i18n="g2">things you can smell</span></li>
+      <li><i>1</i><span data-i18n="g1">slow breath, longer out than in</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p data-i18n="backHome"><a href="index.html">← Back to WellMate</a></p>
+    <p><a href="privacy.html" data-i18n="privacy">Privacy</a> · <a href="research.html" data-i18n="research">Research</a></p>
+  </footer>
+</div>
+
+<script>
+/* Every string here is safety copy. The Dari and Pashto below are drafts and
+   must be read by a native speaker before this page is relied upon. */
+const I18N = {
+ en:{},
+ fa:{
+  exitHint:"هر وقت خواستی، دکمهٔ Escape را بزن تا از این صفحه بیرون بروی.",
+  exitBtn:"خروج از سایت",
+  title:"اگر همین حالا به کمک نیاز داری",
+  lede:"هر چه تو را به اینجا آورده، لازم نیست تنها نگهش داری، و لازم نیست خوب توضیحش بدهی. از اولین چیزِ این صفحه شروع کن.",
+  nowT:"همین حالا، پیش از هر چیز",
+  nowS:"این‌ها نه تیلفون می‌خواهند، نه انترنت، نه پول.",
+  n1t:"بین خودت و هر چیزی که می‌تواند به تو آسیب برساند فاصله بینداز.",
+  n1d:"اگر چیزی نزدیکت است که می‌توانی با آن به خودت آسیب بزنی، به اتاقِ دیگری برو، یا از کسی بخواه آن را نگه دارد.",
+  n2t:"بازدمت را آهسته کن.",
+  n2d:"تا چهار بشمار و نفس بکش. تا شش بشمار و رها کن. هشت بار. بازدمِ درازتر است که بدن را آرام می‌کند.",
+  n3t:"به یک نفر بگو.",
+  n3d:"لازم نیست آدمِ درست باشد، یا داکتر. «امشب حالم خوب نیست» به‌اندازهٔ کافی جمله است.",
+  n4t:"فقط دربارهٔ یک ساعتِ بعد تصمیم بگیر.",
+  n4d:"لازم نیست امشب دربارهٔ زندگی‌ات تصمیم بگیری. فقط به صبح برس. تمامِ کار همین است.",
+  peopleT:"کسانی که می‌توانی به آن‌ها برسی",
+  peopleS:"ما فقط خدماتی را می‌نویسیم که تأییدشان کرده باشیم. هر جا مطمئن نباشیم، همان را می‌گوییم و شمارهٔ نامطمئن نمی‌گذاریم.",
+  w1:"در افغانستان",
+  c1t:"مشورهٔ رایگانِ تیلفونی، به دری و پښتو",
+  c1d:"«اقدام علیه گرسنگی» از سالِ ۲۰۲۲ یک خدمتِ رایگانِ مشورهٔ تیلفونی در سطحِ کشور دارد که روان‌شناسانِ افغان آن را پیش می‌برند. تماس رایگان و محرمانه است، و بسیاری از تماس‌ها از ولایاتی می‌آید که کلینیک نزدیک ندارند.",
+  c1m:"برای وصل‌شدن، در هر مرکزِ صحی، کلینیک یا از کارمندِ صحیِ محل، سراغِ لینِ روانی‌اجتماعیِ «اقدام علیه گرسنگی» را بگیر. اگر همین حالا با یک کارمندِ صحی صحبت می‌کنی، او می‌تواند از طرفِ تو زنگ بزند.",
+  w2:"برای افغان‌های ساکنِ ایالات متحده",
+  c2t:"خدماتِ روانیِ ویژهٔ افغان‌ها",
+  c2m:"۲۴ ساعت، هر روز. مشاوران به دری، پښتو و انگلیسی صحبت می‌کنند. رایگان است. این شماره فقط از داخلِ ایالات متحده کار می‌کند.",
+  w3:"هر جای دنیا",
+  c3t:"در کشورِ خودت یک لینِ کمک پیدا کن",
+  c3d:"اگر بیرون از افغانستان هستی، این فهرست‌ها لین‌های رایگانِ بحران را برای هر کشور به‌روز نگه می‌دارند، از جمله لین‌هایی که به دری یا پښتو جواب می‌دهند.",
+  w4:"اگر جانِ کسی در خطر است",
+  c4t:"به شمارهٔ عاجلِ محلِ خود زنگ بزن",
+  c4d:"اگر تو یا کسی نزدیکِ تو جدی آسیب دیده، یا نزدیک است آسیب ببیند، با خدماتِ عاجل تماس بگیر یا خودت را به نزدیک‌ترین شفاخانه برسان. این پیش از هر چیزِ دیگرِ این صفحه است.",
+  honest:"<b>آنچه نمی‌دانیم.</b> در افغانستان یک لینِ واحدِ بحران وجود ندارد که با اطمینان به تو معرفی کنیم، و ما شماره‌ای از خود نمی‌سازیم. شماره‌ای که در لحظهٔ نیاز جواب ندهد، از نبودنِ شماره بدتر است. اگر خدمتی می‌شناسی که باید اینجا باشد، به ما بگو.",
+  groundT:"اگر هنوز به کسی نرسیده‌ای",
+  groundS:"این حدودِ دو دقیقه وقت می‌گیرد و هر جا کار می‌کند. با صدای بلند یا در ذهنت نام ببر.",
+  g5:"چیزی که می‌بینی", g4:"چیزی که می‌توانی لمس کنی — و لمسش کن",
+  g3:"صدایی که می‌شنوی", g2:"بویی که حس می‌کنی", g1:"نفسِ آهسته، بازدم درازتر از دم",
+  backHome:"<a href='index.html'>→ بازگشت به WellMate</a>",
+  privacy:"حریمِ خصوصی", research:"تحقیق"
+ },
+ ps:{
+  exitHint:"هر وخت چې وغواړې، Escape کېږده چې له دې پاڼې ووځې.",
+  exitBtn:"له سایټه ووځه",
+  title:"که همدا اوس مرستې ته اړتیا لرې",
+  lede:"هر څه چې تا دلته راوستل، اړینه نه ده چې یوازې یې وساتې، او اړینه نه ده چې ښه یې تشرېح کړې. د دې پاڼې له لومړي شي پیل وکړه.",
+  nowT:"همدا اوس، تر هر څه دمخه",
+  nowS:"دې ته نه تلیفون پکار دی، نه انټرنېټ، نه پیسې.",
+  n1t:"د ځان او هر هغه شي ترمنځ واټن جوړ کړه چې تا ته زیان رسولی شي.",
+  n1d:"که ستا لاس ته څه وي چې ځان پرې خوږولی شې، بل کوټې ته لاړ شه، یا له چا وغواړه چې هغه ترې واخلي.",
+  n2t:"ساه دې ورو بهر کړه.",
+  n2d:"تر څلورو وشمېره او ساه دننه کړه. تر شپږو وشمېره او بهر یې کړه. اته ځله. اوږده بهر ساه ده چې بدن ارامه کوي.",
+  n3t:"یو چا ته ووایه.",
+  n3d:"اړینه نه ده چې سم سړی وي، یا ډاکټر. «نن شپه ښه نه یم» بس جمله ده.",
+  n4t:"یوازې د راتلونکي یو ساعت په اړه پرېکړه وکړه.",
+  n4d:"اړینه نه ده چې نن شپه د خپل ژوند په اړه پرېکړه وکړې. سهار ته ځان ورسوه. ټول کار همدا دی.",
+  peopleT:"هغه کسان چې ورته رسېدلی شې",
+  peopleS:"موږ یوازې هغه خدمتونه لیکو چې تایید یې کړو. چېرې چې ډاډه نه یو، همدا وایو او ناڅرګنده شمېره نه ږدو.",
+  w1:"په افغانستان کې",
+  c1t:"وړیا تلیفوني مشوره، په دري او پښتو",
+  c1d:"«د لوږې پر ضد اقدام» له ۲۰۲۲ راهیسې په ټول هېواد کې یو وړیا تلیفوني مشورتي خدمت لري چې افغان روان‌پوهان یې پرمخ وړي. اړیکه وړیا او محرمه ده، او ډېرې اړیکې له هغو ولایتونو راځي چې نږدې کلینیک نه لري.",
+  c1m:"د نښلولو لپاره، په هر روغتیایي مرکز، کلینیک کې یا له سیمه‌ییز روغتیایي کارکوونکي څخه د «د لوږې پر ضد اقدام» رواني‌ټولنیز لین وغواړه. که همدا اوس له روغتیایي کارکوونکي سره خبرې کوې، هغه ستا په استازیتوب زنګ وهلی شي.",
+  w2:"د هغو افغانانو لپاره چې په امریکا کې اوسېږي",
+  c2t:"د افغانانو لپاره رواني ملاتړ",
+  c2m:"۲۴ ساعته، هره ورځ. مشاوران په دري، پښتو او انګلیسي خبرې کوي. وړیا ده. دا شمېره یوازې د امریکا له دننه کار کوي.",
+  w3:"د نړۍ هر ځای",
+  c3t:"په خپل هېواد کې د مرستې لین ومومه",
+  c3d:"که له افغانستانه بهر یې، دا لړلیکونه د هر هېواد وړیا بحراني لینونه تازه ساتي، په هغو کې هغه هم شته چې په دري یا پښتو ځواب وايي.",
+  w4:"که د چا ژوند په خطر کې وي",
+  c4t:"خپلې سیمه‌ییزې بېړنۍ شمېرې ته زنګ ووهه",
+  c4d:"که ته یا څوک ستا نږدې جدي ټپي شوی وي، یا نږدې وي چې زیان ورورسېږي، له بېړنیو خدمتونو سره اړیکه ونیسه یا ځان نږدې روغتون ته ورسوه. دا تر دې پاڼې د هر بل شي دمخه ده.",
+  honest:"<b>هغه څه چې نه پوهېږو.</b> په افغانستان کې یو واحد بحراني لین نشته چې په ډاډ سره یې درپېژنو، او موږ به له ځانه شمېره جوړه نه کړو. هغه شمېره چې د اړتیا په شېبه کې ځواب ونه وايي، له نشتوالي یې بدتره ده. که کوم داسې خدمت پېژنې چې باید دلته وي، موږ ته یې ووایه.",
+  groundT:"که لا تر اوسه چا ته نه یې رسېدلی",
+  groundS:"دا شاوخوا دوه دقیقې وخت نیسي او هر ځای کار کوي. په لوړ اواز یا په ذهن کې نوم واخله.",
+  g5:"هغه څه چې ګورې", g4:"هغه څه چې لمسولی یې شې — او ولمسه یې",
+  g3:"هغه اوازونه چې اورې", g2:"هغه بویونه چې احساسوې", g1:"ورو ساه، بهر یې تر دننه اوږده",
+  backHome:"<a href='index.html'>→ WellMate ته بېرته</a>",
+  privacy:"محرمیت", research:"څېړنه"
+ }
+};
+
+/* ---------- quick exit ---------- */
+const NEUTRAL = 'https://www.google.com/search?q=weather';
+function leaveNow(){
+  // replace() so this page does not stay in the back history
+  try{ window.location.replace(NEUTRAL); }
+  catch(e){ window.location.href = NEUTRAL; }
+}
+document.getElementById('exitBtn').addEventListener('click', leaveNow);
+document.addEventListener('keydown', e => { if(e.key === 'Escape') leaveNow(); });
+
+/* ---------- language ---------- */
+const $$ = s => document.querySelectorAll(s);
+function applyLang(l){
+  const t = I18N[l] || {};
+  document.documentElement.lang = l;
+  document.documentElement.dir = (l === 'en') ? 'ltr' : 'rtl';
+  $$('[data-i18n]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n')];
+    if(typeof v === 'string') { if(v.indexOf('<') > -1) el.innerHTML = v; else el.textContent = v; }
+  });
+  $$('.lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  if(t.title) document.title = t.title + ' — WellMate';
+  try{ localStorage.setItem('wellmate.v1',
+    JSON.stringify(Object.assign(JSON.parse(localStorage.getItem('wellmate.v1')||'{}'), {lang:l}))); }catch(e){}
+  const u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null,'',u);
+}
+$$('.lang button').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+/* English is what is already in the markup, so only switch away from it */
+let saved = {};
+try{ saved = JSON.parse(localStorage.getItem('wellmate.v1')) || {}; }catch(e){}
+const start = new URLSearchParams(location.search).get('lang') || saved.lang
+            || (navigator.language||'en').slice(0,2);
+if(I18N[start] && start !== 'en') applyLang(start);
+else document.querySelector('.lang button[data-lang="en"]').classList.add('active');
+</script>
+</body>
+</html>

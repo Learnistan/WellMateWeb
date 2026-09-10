@@ -295,7 +295,23 @@
 
   footer{background:var(--walnut); color:rgba(245,239,227,.72);}
   footer .wrap{padding-top:52px; padding-bottom:42px;}
-  .safety{background:rgba(200,137,58,.15); border:1px solid rgba(200,137,58,.4); border-radius:18px; padding:18px 22px; color:#f0d8bb; font-size:15px; margin-bottom:28px;}
+  .safety{background:rgba(200,137,58,.15); border:1px solid rgba(200,137,58,.4); border-radius:18px;
+    padding:20px 24px; color:#f0d8bb; font-size:15px; margin-bottom:28px;
+    display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center; justify-content:space-between;}
+  .safety p{max-width:52ch; line-height:1.6;}
+  .safety .acts{display:flex; gap:10px; flex-wrap:wrap;}
+  .safety a.help{display:inline-flex; align-items:center; gap:8px; background:var(--saffron); color:#3d2a10;
+    border-radius:999px; padding:11px 20px; font-weight:600; font-size:14.5px; white-space:nowrap;
+    transition:transform .15s ease, box-shadow .2s ease;}
+  .safety a.help:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(200,137,58,.35);}
+  .leave{display:inline-flex; align-items:center; gap:7px; border:1px solid rgba(245,239,227,.35);
+    background:transparent; color:rgba(245,239,227,.85); border-radius:999px; padding:10px 18px;
+    font:600 14px var(--font-body); cursor:pointer; white-space:nowrap; transition:.2s;}
+  .leave:hover{background:rgba(245,239,227,.14); color:#fff;}
+  .nav-leave{display:none; color:var(--walnut); font-size:13.5px; padding:8px 12px; border-radius:10px;
+    opacity:.72; background:none; border:0; font-family:inherit; cursor:pointer;}
+  .nav-leave:hover{background:rgba(0,0,0,.06); opacity:1;}
+  @media(min-width:900px){.nav-leave{display:inline-flex; align-items:center; gap:6px;}}
   .foot-bottom{display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between; align-items:center; font-size:13.5px; border-top:1px solid rgba(255,255,255,.12); padding-top:24px; margin-top:24px;}
   .foot-bottom .eco{max-width:64ch; color:rgba(245,239,227,.6);}
 
@@ -453,6 +469,7 @@
       <button data-lang="fa">دری</button>
       <button data-lang="ps">پښتو</button>
     </div>
+    <button class="nav-leave" id="navLeave" type="button"><span aria-hidden="true">✕</span><span data-i18n="leaveBtn">Leave</span></button>
     <a class="btn btn-pri btn-sm" href="#get" data-i18n="navGet">Get WellMate</a>
   </div>
 </header>
@@ -637,10 +654,16 @@
 
 <footer>
   <div class="wrap">
-    <p class="safety" data-i18n="safety">If you ever feel unsafe or in crisis, please reach out to someone you trust, or a local helpline. Support is always one step away — you never have to face it alone.</p>
+    <div class="safety">
+      <p data-i18n="safety">If you feel unsafe, or tonight is heavier than you can carry, there are steps you can take right now — and people you can reach. You never have to face it alone.</p>
+      <span class="acts">
+        <a class="help" href="help.html"><span aria-hidden="true">🤍</span><span data-i18n="safetyCta">If you need help now</span></a>
+        <button class="leave" id="footLeave" type="button"><span aria-hidden="true">✕</span><span data-i18n="leaveBtn">Leave this site</span></button>
+      </span>
+    </div>
     <div class="foot-bottom">
       <p class="eco" data-i18n="eco">WellMate is a standalone companion, created within LEARNistan (part of the LEARN family). Your experience is of WellMate alone.</p>
-      <p><a href="research.html" data-i18n="researchLink" style="text-decoration:underline; text-underline-offset:3px;">Research</a> · <a href="privacy.html" data-i18n="privacyLink" style="text-decoration:underline; text-underline-offset:3px;">Privacy</a> · © <span id="year"></span> wellmate.app</p>
+      <p><a href="help.html" data-i18n="helpLink" style="text-decoration:underline; text-underline-offset:3px;">Get help</a> · <a href="research.html" data-i18n="researchLink" style="text-decoration:underline; text-underline-offset:3px;">Research</a> · <a href="privacy.html" data-i18n="privacyLink" style="text-decoration:underline; text-underline-offset:3px;">Privacy</a> · © <span id="year"></span> wellmate.app</p>
     </div>
   </div>
 </footer>
@@ -769,9 +792,10 @@ const I18N = {
   getTitle:"Get WellMate.",
   getSub:"The Android app is here — iOS will follow.",
   storePlay:"Install WellMate on", storeIos:"Coming soon",
-  safety:"If you ever feel unsafe or in crisis, please reach out to someone you trust, or a local helpline. Support is always one step away — you never have to face it alone.",
+  safety:"If you feel unsafe, or tonight is heavier than you can carry, there are steps you can take right now — and people you can reach. You never have to face it alone.",
   eco:"WellMate is a standalone companion, created within LEARNistan (part of the LEARN family). Your experience is of WellMate alone.",
   mgOpen:"Open it in WellMate", mgNote:"This one lives in the app, where it can remember how you answered.",
+  safetyCta:"If you need help now", helpLink:"Get help", leaveBtn:"Leave this site",
   practice:{
     close:"Close", done:"I'm done", begin:"Begin", again:"Again", next:"Next",
     breathing:{
@@ -909,9 +933,10 @@ const I18N = {
   getSub:"اپِ اندروید آماده است — اکنون در آزمایشِ داخلی در Google Play، با دعوت. نسخهٔ عمومی خیلی زود منتشر می‌شود؛ iOS هم در راه است.",
   storePlay:"اکنون در آزمایشِ داخلی", storeIos:"به‌زودی",
   getNote:"آزمایش فعلاً با دعوت است — انتشارِ عمومی خیلی زود. به زبانِ خودت، همیشه مالِ تو.",
-  safety:"اگر هر وقت احساسِ ناامنی یا بحران کردی، لطفاً با کسی که به او اعتماد داری یا یک خطِ کمکِ محلی تماس بگیر. حمایت همیشه یک قدم دورتر است — هرگز لازم نیست تنها با آن روبه‌رو شوی.",
+  safety:"اگر احساسِ ناامنی می‌کنی، یا امشب سنگین‌تر از توانِ توست، همین حالا کارهایی هست که می‌توانی بکنی — و کسانی که می‌توانی به آن‌ها برسی. هرگز لازم نیست تنها با آن روبه‌رو شوی.",
   eco:"WellMate یک همراهِ مستقل است که در دلِ LEARNistan (بخشی از خانوادهٔ LEARN) ساخته شده. تجربهٔ تو تنها از آنِ WellMate است.",
   mgOpen:"در WellMate بازش کن", mgNote:"این یکی در اپ است، جایی که می‌تواند جواب‌هایت را به یاد بسپارد.",
+  safetyCta:"اگر همین حالا به کمک نیاز داری", helpLink:"دریافتِ کمک", leaveBtn:"خروج از سایت",
   practice:{
     close:"بستن", done:"تمام شد", begin:"شروع", again:"دوباره", next:"بعدی",
     breathing:{
@@ -1049,9 +1074,10 @@ const I18N = {
   getSub:"د اندروید اپ چمتو دی — اوس په Google Play کې په داخلي ازموینه کې، په بلنه. عمومي خپرېدل ډېر ژر دي؛ iOS به هم راشي.",
   storePlay:"اوس په داخلي ازموینه کې", storeIos:"ژر راځي",
   getNote:"ازموینه اوس مهال په بلنه ده — عمومي خپرېدل ډېر ژر. ستا په ژبه، تل ستا.",
-  safety:"که کله هم د ناامنۍ یا بحران احساس وکړې، مهرباني وکړه له داسې چا سره چې پرې باور لرې یا محلي مرستندویه کرښې سره اړیکه ونیسه. ملاتړ تل یو قدم لرې دی — هیڅکله اړ نه يې چې یوازې ورسره مخ شې.",
+  safety:"که د ناامنۍ احساس کوې، یا نن شپه ستا له توانه درنه ده، همدا اوس داسې کارونه شته چې کولی یې شې — او داسې کسان چې ورته رسېدلی شې. هیڅکله اړ نه یې چې یوازې ورسره مخ شې.",
   eco:"WellMate یو خپلواک ملګری دی چې د LEARNistan (د LEARN کورنۍ برخه) دننه جوړ شوی. ستا تجربه یوازې د WellMate ده.",
   mgOpen:"په WellMate کې یې پرانیزه", mgNote:"دا یو په اپ کې دی، هلته چې ستا ځوابونه یادولی شي.",
+  safetyCta:"که همدا اوس مرستې ته اړتیا لرې", helpLink:"مرسته", leaveBtn:"له سایټه ووځه",
   practice:{
     close:"بندول", done:"بس دی", begin:"پیل", again:"بیا", next:"بل",
     breathing:{
@@ -1802,6 +1828,14 @@ $('#scr-cta').addEventListener('click', openLiveWellMate);
 $('#scr-cta').addEventListener('keydown',e=>{
   if(e.key==='Enter'||e.key===' '){e.preventDefault();openLiveWellMate();}
 });
+/* quick exit — a shared phone is the common case, not the edge case.
+   replace() so this page does not stay in the back history. */
+function leaveNow(){
+  const NEUTRAL='https://www.google.com/search?q=weather';
+  try{ window.location.replace(NEUTRAL); }catch(e){ window.location.href=NEUTRAL; }
+}
+['#navLeave','#footLeave'].forEach(sel=>{ const el=$(sel); if(el) el.addEventListener('click',leaveNow); });
+
 $('#gReplay').addEventListener('click',renderGame);
 [['#mg1',0],['#mg2',1]].forEach(([sel,i])=>{
   $(sel).addEventListener('click',()=>{
