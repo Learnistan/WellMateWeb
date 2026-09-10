@@ -48,7 +48,7 @@ const get = (root, dotted) => {
 };
 const fnOf = (root, dotted) => { const f = get(root, dotted); return typeof f === 'function' ? String(f).slice(0, 300) : ''; };
 
-for (const file of ['index.html', 'help.html']) {
+for (const file of ['index.html']) {
   const I = pullI18N(file);
   // help.html keeps English in the markup, so seed it from the fa key list
   const en = I.en && Object.keys(I.en).length ? I.en : Object.fromEntries(Object.keys(I.fa).map(k => [k, '(in markup)']));
