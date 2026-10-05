@@ -641,7 +641,7 @@
     <p class="safety" data-i18n="safety">If tonight feels heavier than you can carry, tell one person. It doesn't have to be the right person.</p>
     <div class="foot-bottom">
       <p class="eco" data-i18n="eco">WellMate is a standalone companion, created within LEARNistan (part of the LEARN family). Your experience is of WellMate alone.</p>
-      <p><a href="research.html" data-i18n="researchLink" style="text-decoration:underline; text-underline-offset:3px;">Research</a> · <a href="privacy.html" data-i18n="privacyLink" style="text-decoration:underline; text-underline-offset:3px;">Privacy</a> · © <span id="year"></span> wellmate.app</p>
+      <p><a href="research.html" data-i18n="researchLink" style="text-decoration:underline; text-underline-offset:3px;">Research</a> · <a href="privacy.html" data-i18n="privacyLink" style="text-decoration:underline; text-underline-offset:3px;">Privacy</a> · <a id="parentSite" href="https://www.learnistan.org" target="_blank" rel="noopener" dir="ltr" style="text-decoration:underline; text-underline-offset:3px;">learnistan.org</a> · © <span id="year"></span> wellmate.app</p>
     </div>
   </div>
 </footer>
@@ -1159,6 +1159,8 @@ function renderStatic(){
   document.documentElement.dir = (lang==='en') ? 'ltr' : 'rtl';
   document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); if(typeof t[k]==='string') el.textContent=t[k]; });
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+  /* the company site speaks the same three languages; English sits at its bare address */
+  $('#parentSite').href = 'https://www.learnistan.org' + (lang==='en' ? '' : '/'+lang);
   $('#aiTitle').textContent=t.aiTitle; $('#aiSub').textContent=t.aiSub; $('#aiStatus').textContent=t.aiStatus;
 }
 
